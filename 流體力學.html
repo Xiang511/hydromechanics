@@ -1,8 +1,29 @@
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-<form action="https://script.google.com/macros/s/AKfycby4T8OYEp9sNI5RO-HwKWLMaeJamMCYjHhLlfAqSHXcR-s33NvAp941Fg5ZP6V6q5XdVg/exec" method="post" target="hidden_iframe">
-<input type="hidden" name="method" value="write" />
-<input type="text" name="name" placeholder="填入稱謂" title="填入稱謂" /><br/>
-<input type="text" name="sex" placeholder="填入性別" title="填入性別" /><br/>
-<input type="text" name="remark" placeholder="填入註解" title="填入註解" /><br/>
-<input type="submit" value="提交" />
-</form>
+<div id="wfu_sheet_json"></div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+<script>
+	var spreadsheet_id = "1OT3mrWkUWGJR6E6dgro2AENUl9vppIwtDs5_P2Ev2GQ", // 填入試算表 ID
+		tab_name = "sheet1", // 填入工作表名稱
+		api_key = "AIzaSyBtqLW1ThQ2Mt7SQWW2PPDTFr91xr_erjY", // 填入 API 金鑰
+		url = "https://sheets.googleapis.com/v4/spreadsheets/" + spreadsheet_id + "/values/" + tab_name + "?key=" + api_key;
+
+	$.getJSON(url, function(json) {
+		var values = json.values, // 所有試算表資料
+			html = "";
+
+		html += "<table>";
+
+		values.forEach(function(rows) {
+			html += "<tr>";
+
+			rows.forEach(function(item) {
+				html += "<td>" + item + "</td>";
+			});
+
+			html += "</tr>";
+		});
+
+		html += "</table>";
+
+		$("#wfu_sheet_json").html(html);
+	});
+</script>
