@@ -56,7 +56,7 @@
                 }
 
             }
-            var url = "https://script.google.com/macros/s/AKfycbzz3Rkg9M07SN6S7AcDwMiwyNlwtTi2Yapj7h7Lx-dOI_3yTPi-O2qxDtosE2Gt9vf3/exec";
+            var url = "https://script.google.com/macros/s/AKfycbzoYzRXKZIaPmXJuyUuQi9IKGB8PQVFTwcDBOFefqYu557q1Gm-ufglAcQA2DKOpOnh/exec";
             xmlhttp.open("get", url + "?uid=" + encodeURIComponent(str), true);
             xmlhttp.send();
         }
@@ -70,8 +70,9 @@
       }
       body{
         margin: auto;
-        max-width: 1200px;
-       
+        max-width: 1600px;
+        background: #fffdfd;
+        
        
       }
         /* 流體文字 */
@@ -82,13 +83,15 @@
           margin-right: 10px;
         }
         /* nav右移 */
-        .navbar-nav {
-          margin: auto;
-        }
         .navbar-nav a{
           font-size: 20px;
           margin-top: 4px;
           margin-right: 3px;
+        }
+  
+        .wrap img{
+          height: 420px;/*自訂*/
+         
         }
         .wrap h1{
           display: block;
@@ -98,67 +101,35 @@
           height: 100px;
           background-color: #C0C0C0;
         }
-        .item2{     
+        .item2{
+          height: 150px;
           display: flex;
-          flex-wrap: wrap;
           justify-content: center;
-          margin-top: 25px;
-      
+          align-items: center;
         }
-        .item2 .txt{
-          text-align: center  ;
-          align-self: center;
-          width: 33.333333%;
-        }
-        .item2 .form{
-       
-          width:  33.333333%;
-          
-        }
-        /* .item2 .form .form-control{
-          width: 35%;
-        } */
-        .item2 .btn{
-          text-align: left  ;
-          width:  10.3333333%;
+        .form{
           display: flex;
-          justify-content:flex-start;
-         
+          justify-content: center;
         }
-
-        .item2 .space{
-          width: 25%;
+        .form #uid{
+          width: 30%;
+          margin-right: 8px;
         }
         #order_status{
           justify-content: center;
           background-color: #eee;
         }
 
-        @media screen and (max-width:767px){
-          .item2 .txt {
-            font-size: .6em;
-          }
-          .item2 .txt{
-          text-align: right  ;
-          width: 40%;
-          }
-          .item2 .form{
        
-          width:  26%;
-          }
-        }
         @media screen and (min-width:768px){
-          .item2 .txt h3{
-            font-size: 1.5em;
-          }
+        
         }
         .result{
-          width: 80%;
+          height: 350px;
+          width: 90%;
           margin: auto;
         }
-        .item2 .txt{
-          text-align: right;
-        }
+        
         .footer {
           width: 100%;
           display: flex;
@@ -202,9 +173,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" href="#">首頁</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link disabled" href="#">排行榜</a>
               </li>
@@ -219,7 +188,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">賽事重播</a>
+                <a class="nav-link " href="/match.html">賽事重播</a>
               </li>
               
             </ul>
@@ -235,26 +204,19 @@
       </div>
 
       <div class="item2">
-          <div class="txt">
+        
+        <div class="form">
             <h3>請輸入名稱：</h3>
-          </div>
-          <div class="form">
-            <input type="text" id="uid" class="form-control "/>
-          </div>
-          <div class="btn">
-            <input type="button"  name="inq" value="查詢" onclick="showHint(uid.value);"></br>
-           
-          </div>
-          <div class="space">
-
-          </div>
+            <input type="text" id="uid" class="form-control "/> 
+            <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="showHint(uid.value);">
         </div>
        
-        <div class="result">
-          <span id="order_status"></span>
-        </div>
+      </div>
     </div>
-  </br></br></br></br></br></br></br></br></br></br></br></br></br>
+       <div class="result">
+           <span id="order_status"></span>
+        </div>
+
     <div class="footer">
     
       <div class="item1">
@@ -265,10 +227,7 @@
         <p id="last">聯絡我們</p>
         <p id="rights">©2023 流體力學 All Rights Reserved  |  Design by Xiang.</p>
       </div>
-      <div class="item2">
-       
-      </div>
-    
+      
     </div>
    
 </body>
