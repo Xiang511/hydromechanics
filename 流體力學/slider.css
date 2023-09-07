@@ -1,0 +1,40 @@
+body{
+    background-color:#fffa;
+}
+.slider-pic{
+    scale: 0.7;
+    filter: blur(3px);
+}
+.owl-item.active.center .slider-pic{
+    scale: 0.8;
+    filter: blur(0px);
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    width: 40px;
+    /* background-color: #fff7; */
+    margin: 0;
+    border-radius: 0;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    left: 0;
+    background-image: linear-gradient(to right,#fffa,#fff0);
+}
+.owl-carousel .owl-nav button.owl-next{
+
+    right: 0;
+    background-image: linear-gradient(to left,#fffa,#fff0);
+}
+.owl-theme .owl-dots .owl-dot:hover span{
+    background-color: blue;
+    
+}
+.owl-theme .owl-dots .owl-dot .active span{
+    background-color: red;
+    scale: 1.7;
+    transition: .5s;
+
+}
