@@ -43,6 +43,13 @@
                     html += "</table>";
                    
                     document.getElementById("order_status").innerHTML = html;
+                    if(obj.length > 20){
+                        let div = document.getElementById('result');
+                        div.style.height = '2150px';
+                    }else{
+                        let div = document.getElementById('result');
+                        div.style.height = '350px';
+                    }
                     if (obj.length == 1){
                       //只有一筆代表查不到資料
                         alert('查無資料');
@@ -57,7 +64,7 @@
                 }
 
             }
-            var url = "https://script.google.com/macros/s/AKfycbzxLwGys8KxodvjMiWurqVeZ9c6tgupZqXuze3z1jTXtqDRFPdb2X9Aydu83FiYwfeO/exec";
+            var url = "https://script.google.com/macros/s/AKfycbyKfXwxL_OdOerHyw6ODiyQnNIbTAAEkJxLPoNGH0J8Ej0LAToAmt6X06MB6w9rHdqq/exec";
             xmlhttp.open("get", url + "?uid=" + encodeURIComponent(str), true);
             xmlhttp.send();
         }
@@ -185,7 +192,7 @@
                   人員查詢
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
+                  <li><a class="dropdown-item" href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/search_ID.html">ID/LINE查詢</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
                 </ul>
@@ -210,13 +217,13 @@
         
         <div class="form">
             
-            <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID"/> 
+            <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID/all"/> 
             <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="showHint(uid.value);">
         </div>
        
       </div>
     </div>
-       <div class="result">
+       <div class="result" id="result">
            <span id="order_status"></span>
         </div>
 
