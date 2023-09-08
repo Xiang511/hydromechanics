@@ -13,6 +13,19 @@
     <!-- jQuery v1.9.1 -->
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <style>
+      /* 流體文字 */
+      .container-fluid > a{
+          font-size: 28px;
+        }
+        .container-fluid img{
+          margin-right: 10px;
+        }
+        /* nav右移 */
+        .navbar-nav a{
+          font-size: 20px;
+          margin-top: 4px;
+          margin-right: 3px;
+        }
         .videobox {
             position: relative;
             width: 100%;
@@ -46,9 +59,11 @@
             font-size: 60px;
         }
         .mv{background-color: #fff;}
+        .br{
+          background-color: #F8F9FA;
+        }
 
-
-
+        
 
         .footer {
           width: 100%;
@@ -82,7 +97,7 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <img src="img/icon.png" alt="Logo" width="50" height="44" class="d-inline-block align-text-top">
-              <a class="navbar-brand" href="#">流體力學</a>
+              <a class="navbar-brand" href="/index.html">流體力學</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -97,13 +112,13 @@
                       人員查詢
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/search_ID.html">ID/LINE查詢</a></li>
+                      <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/match.html">賽事重播</a>
+                    <a class="nav-link " href="/match.html">賽事重播</a>
                   </li>
                   
                 </ul>
@@ -116,31 +131,34 @@
     </div>
      <section class="py-5 bg-light " id="scroll-target">
         <div class="container px-5 mt-5 md-3">
-            <div class="row gx-5 align-items-center mv">
+            <div class="row gx-1 align-items-center mv">
                 
+               
+                <div class="col-lg-6">
+                    <div class="videobox">
+                    <iframe frameborder="0" src="https://www.youtube.com/embed/APxjMyQfy4A?si=gP6YafKALMXWc2OK" allowFullScreen="true">
+                    </iframe>
+                    </div>
+                </div> 
                 <div class="col-lg-6 ">
                     <h2 class="animate__animated animate__backInLeft animate__delay-0.5s">團體戰-流體力學vs中國TeamDragon交流賽！</h2>
                     <p class="lead fw-normal text-muted mb-0">
                         日期：2023年9月2日  
                     </p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="videobox">
-                    <iframe frameborder="0" src="https://www.youtube.com/embed/APxjMyQfy4A?si=gP6YafKALMXWc2OK" allowFullScreen="true">
-                    </iframe>
-                    </div></div>
             </div>
         </div>
     </section>
 
     <section class="py-5 bg-light " id="scroll-target">
         <div class="container px-5 mt-5 md-3 ">
-            <div class="row gx-5 align-items-center mv"><div class="col-lg-6">
+            <div class="row gx-1 align-items-center mv">
+              <div class="col-lg-6" id="a">
                     <div class="videobox">
                     <iframe frameborder="0" src="https://www.youtube.com/embed/OKTTEchOurM?si=Y1ATxbYqe9lF-Nd3" allowFullScreen="true">
                     </iframe>
                     </div></div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" id="b">
                     <h2 class="fw-bolder animate__animated animate__backInRight animate__delay-1s">流體力學xHigher挑戰賽！</h2>
                     <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInRight animate__delay-1s">
                         日期：2023年7月22日  
@@ -153,24 +171,27 @@
 
     <section class="py-5 bg-light " id="scroll-target">
         <div class="container px-5 mt-5 md-3 ">
-            <div class="row gx-5 align-items-center mv"><div class="col-lg-6">
+            <div class="row gx-1 align-items-center mv">
+              <div class="col-lg-6">
+                    <div class="videobox">
+                    <iframe frameborder="0" src="https://www.youtube.com/embed/vuvbQ-6jq2E?si=TCaj09NINL22ZMQV" allowFullScreen="true">
+                    </iframe>
+                    </div>
+              </div>
+              <div class="col-lg-6">
                     <h2 class="fw-bolder animate__animated animate__backInLeft animate__delay-1s ">流體力學xLucas挑戰賽！</h2>
                     <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInLeft animate__delay-1s">
                          日期：2023年6月25日  
                     </p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="videobox">
-                    <iframe frameborder="0" src="https://www.youtube.com/embed/vuvbQ-6jq2E?si=TCaj09NINL22ZMQV" allowFullScreen="true">
-                    </iframe>
-                    </div></div>
+             </div>
+                
                 
             </div>
         </div>
     </section>
     
     
-
+  <div class="br"></br>  </br>   </br></div>
     <div class="footer">
     
         <div class="item1">
