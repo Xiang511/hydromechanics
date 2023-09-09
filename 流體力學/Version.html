@@ -15,7 +15,14 @@
    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
    <style>
-    
+        html, body{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .wrap{
+          flex-grow: 1;
+        }
         
         section{
             width: 100%;
@@ -41,8 +48,7 @@
    </style>
 </head>
 <body>
-    <div class="wrap">
-        <nav class="navbar sticky-top navbar-expand-lg bg-light">
+     <nav class="navbar sticky-top navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,6 +83,8 @@
                 </div>
             </div>
         </nav>
+    <div class="wrap">
+       
         
         <section>
         </br>

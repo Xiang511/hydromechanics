@@ -56,7 +56,7 @@
                     html += "</table>";
                    
                     document.getElementById("order_status").innerHTML = html;
-                    if(obj.length > 20){
+                    if(obj.length > 8){
                         let div = document.getElementById('result');
                         div.style.height = '100%';
                     }else{
@@ -68,7 +68,7 @@
                         alert('查無資料');
                         document.getElementById("uid").value  ="";
                         
-                        toastr.warning( "請注意! 至少需要兩個關鍵字才能查詢" );
+                        toastr.warning( "請重新輸入" );
                     } 
                     else{
                        toastr.success( "Success" );
@@ -77,13 +77,21 @@
                 }
 
             }
-            var url = "https://script.google.com/macros/s/AKfycbxsn3biq0XkmekWAa7sZ9ZPsNTb2VFpjAzfJNy6-OTh2GMlv5Mfdle472zeX1NL9V0z/exec";
+            var url = "https://script.google.com/macros/s/AKfycbxKynT5kmMUwLXwaOx2WJIdan8njItYwHdzvDCiu_5sHwCd8myjUIAWsGVjHq9N1Alh/exec";
             xmlhttp.open("get", url + "?uid=" + encodeURIComponent(str), true);
             xmlhttp.send();
         }
     </script>
     
     <style> 
+        html, body{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .wrap{
+          flex-grow: 1;
+        }
         .wrap img{
           height: 420px;/*自訂*/
          
@@ -125,18 +133,24 @@
 
         @media screen and (max-width:400px){
           #order_status{
-            font-size: 0.75em;
+          font-size: .75em;
         }
         }
     
         .result{
-          height: 350px;
           width: 90%;
           margin: auto;
           overflow: auto;
         }
-
-    
+        .footer {
+          margin-top: 18px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          background-color: #3f3939;
+          background: #f2f3f4;
+        }
+   
     </style>
 </head>
 <body>
@@ -186,16 +200,18 @@
       <div class="item2">
         
         <div class="form">
-            
             <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID/all" onclick="document.getElementById('uid').value=''"/> 
             <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="showHint(uid.value);">
         </div>
        
       </div>
+
+      <div class="result" id="result">
+          <span id="order_status"></span>
+      </div>
+
     </div>
-       <div class="result" id="result">
-           <span id="order_status"></span>
-        </div>
+       
 
         <div class="footer">
     

@@ -19,6 +19,14 @@
 
 
     <style>
+        html, body{
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .wrap{
+          flex-grow: 1;
+        }
         .videobox {
             position: relative;
             width: 100%;
@@ -96,72 +104,70 @@
         </div>
     </nav>
    
-    <div class="banner">
-        <h2  class="animate__animated animate__backInLeft animate__delay-0.5s">賽事重播</h2>
+    <div class="wrap">
+        <div class="banner">
+            <h2  class="animate__animated animate__backInLeft animate__delay-0.5s">賽事重播</h2>
+        </div>
+         <section class="py-5 bg-light " id="scroll-target">
+            <div class="container px-5 mt-5 md-3">
+                <div class="row gx-1 align-items-center mv">
+        
+        
+                    <div class="col-lg-6">
+                        <div class="videobox">
+                        <iframe frameborder="0" src="https://www.youtube.com/embed/APxjMyQfy4A?si=gP6YafKALMXWc2OK" allowFullScreen="true">
+                        </iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <h2 class="animate__animated animate__backInLeft animate__delay-0.5s">團體戰-流體力學vs中國TeamDragon交流賽！</h2>
+                        <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInLeft animate__delay-0.5s">
+                            日期：2023年9月2日
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light " id="scroll-target">
+            <div class="container px-5 mt-5 md-3 ">
+                <div class="row gx-1 align-items-center mv">
+                  <div class="col-lg-6" id="a">
+                        <div class="videobox">
+                        <iframe frameborder="0" src="https://www.youtube.com/embed/OKTTEchOurM?si=Y1ATxbYqe9lF-Nd3" allowFullScreen="true">
+                        </iframe>
+                        </div></div>
+                    <div class="col-lg-6" id="b">
+                        <h2 class="fw-bolder animate__animated animate__backInRight animate__delay-1s">流體力學xHigher挑戰賽！</h2>
+                        <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInRight animate__delay-1s">
+                            日期：2023年7月22日
+                        </p>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light " id="scroll-target">
+            <div class="container px-5 mt-5 md-3 ">
+                <div class="row gx-1 align-items-center mv">
+                  <div class="col-lg-6">
+                        <div class="videobox">
+                        <iframe frameborder="0" src="https://www.youtube.com/embed/vuvbQ-6jq2E?si=TCaj09NINL22ZMQV" allowFullScreen="true">
+                        </iframe>
+                        </div>
+                  </div>
+                  <div class="col-lg-6">
+                        <h2 class="fw-bolder animate__animated animate__backInLeft animate__delay-1s ">流體力學xLucas挑戰賽！</h2>
+                        <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInLeft animate__delay-1s">
+                             日期：2023年6月25日
+                        </p>
+                 </div>
+        
+        
+                </div>
+            </div>
+        </section>
     </div>
-     <section class="py-5 bg-light " id="scroll-target">
-        <div class="container px-5 mt-5 md-3">
-            <div class="row gx-1 align-items-center mv">
-                
-               
-                <div class="col-lg-6">
-                    <div class="videobox">
-                    <iframe frameborder="0" src="https://www.youtube.com/embed/APxjMyQfy4A?si=gP6YafKALMXWc2OK" allowFullScreen="true">
-                    </iframe>
-                    </div>
-                </div> 
-                <div class="col-lg-6 ">
-                    <h2 class="animate__animated animate__backInLeft animate__delay-0.5s">團體戰-流體力學vs中國TeamDragon交流賽！</h2>
-                    <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInLeft animate__delay-0.5s">
-                        日期：2023年9月2日  
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5 bg-light " id="scroll-target">
-        <div class="container px-5 mt-5 md-3 ">
-            <div class="row gx-1 align-items-center mv">
-              <div class="col-lg-6" id="a">
-                    <div class="videobox">
-                    <iframe frameborder="0" src="https://www.youtube.com/embed/OKTTEchOurM?si=Y1ATxbYqe9lF-Nd3" allowFullScreen="true">
-                    </iframe>
-                    </div></div>
-                <div class="col-lg-6" id="b">
-                    <h2 class="fw-bolder animate__animated animate__backInRight animate__delay-1s">流體力學xHigher挑戰賽！</h2>
-                    <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInRight animate__delay-1s">
-                        日期：2023年7月22日  
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5 bg-light " id="scroll-target">
-        <div class="container px-5 mt-5 md-3 ">
-            <div class="row gx-1 align-items-center mv">
-              <div class="col-lg-6">
-                    <div class="videobox">
-                    <iframe frameborder="0" src="https://www.youtube.com/embed/vuvbQ-6jq2E?si=TCaj09NINL22ZMQV" allowFullScreen="true">
-                    </iframe>
-                    </div>
-              </div>
-              <div class="col-lg-6">
-                    <h2 class="fw-bolder animate__animated animate__backInLeft animate__delay-1s ">流體力學xLucas挑戰賽！</h2>
-                    <p class="lead fw-normal text-muted mb-0 animate__animated animate__backInLeft animate__delay-1s">
-                         日期：2023年6月25日  
-                    </p>
-             </div>
-                
-                
-            </div>
-        </div>
-    </section>
     
-    
-  <div class="br"></br>  </br>   </br></div>
   <div class="footer">
     
     <div class="item1">
