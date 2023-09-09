@@ -58,7 +58,7 @@
                     document.getElementById("order_status").innerHTML = html;
                     if(obj.length > 20){
                         let div = document.getElementById('result');
-                        div.style.height = '2330px';
+                        div.style.height = '100%';
                     }else{
                         let div = document.getElementById('result');
                         div.style.height = '350px';
@@ -114,7 +114,7 @@
           justify-content: center;
           background-color: #eee;
         }
-
+        
        
         @media screen and (min-width:768px){
           .form #uid{
@@ -122,52 +122,59 @@
           }
           
         }
+
+        @media screen and (max-width:400px){
+          #order_status{
+          font-size: .1em;
+        }
+        }
     
         .result{
           height: 350px;
-          width: 98%;
+          width: 90%;
           margin: auto;
+          overflow: auto;
         }
 
     
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav" id="nav">
-                        <li class="nav-item">
-                            <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/index.html">首頁</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">排行榜</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            人員查詢
-                            </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/search_ID.html">ID/LINE查詢</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
-                                </ul>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/match.html">賽事重播</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/Version.html">更新進度</a>
-                        </li>
-                  
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  <nav class="navbar sticky-top navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">排行榜</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    人員查詢
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
+                        </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="match.html">賽事重播</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="Version.html">更新進度</a>
+                </li>
+          
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
     <div class="wrap">
@@ -180,7 +187,7 @@
         
         <div class="form">
             
-            <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID/all"/> 
+            <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID/all" onclick="document.getElementById('uid').value=''"/> 
             <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="showHint(uid.value);">
         </div>
        
@@ -190,18 +197,18 @@
            <span id="order_status"></span>
         </div>
 
-    <div class="footer">
+        <div class="footer">
     
-      <div class="item1">
-        <h3>流體力學</h3>
-        <p>排行榜</p>
-        <p>查詢系統</p>
-        <p>賽事重播</p>
-        <p id="last">聯絡我們</p>
-        <p id="rights">©2023 流體力學   |  Design by Xiang</p>
-      </div>
-      
-    </div>
+          <div class="item1">
+            <h3><a class="block"href="index".html>流體力學</a></h3>
+            <a class="block">排行榜</a>
+            <a class="block" href="search_ID.html">查詢系統</ㄇ>
+            <a class="block"href="match.html">賽事重播</a>
+            <a class="block"id="last">聯絡我們</a>
+            <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
+          </div>
+          
+        </div>
    
 </body>
 </html>

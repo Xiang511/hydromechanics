@@ -19,8 +19,8 @@
         
         section{
             width: 100%;
-            height: 600px;
-            margin: auto;
+            height: 100%;
+            margin: 0px auto 46px;
         }
         section .background{
             /* background-color: #F8F9FA; */
@@ -42,16 +42,16 @@
 </head>
 <body>
     <div class="wrap">
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar sticky-top navbar-expand-lg bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
+              <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav" id="nav">
                         <li class="nav-item">
-                            <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/index.html">首頁</a>
+                            <a class="nav-link " href="index.html">首頁</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#">排行榜</a>
@@ -61,16 +61,16 @@
                             人員查詢
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/search_ID.html">ID/LINE查詢</a></li>
+                                    <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
                                 </ul>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/match.html">賽事重播</a>
+                        <a class="nav-link " href="match.html">賽事重播</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/Version.html">更新進度</a>
+                            <a class="nav-link " href="Version.html">更新進度</a>
                         </li>
                   
                     </ul>
@@ -110,14 +110,21 @@
                         <h3>排行榜</h3>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
                     </div>
 
                     <div class="item">
                         <h3>聯絡我們</h3>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 5%"></div>
+                    </div>
+
+                    <div class="item">
+                        <h3>留言板</h3>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 5%"></div>
                     </div>
 
                 </div>
@@ -129,12 +136,12 @@
     <div class="footer">
     
         <div class="item1">
-          <h3>流體力學</h3>
-          <p>排行榜</p>
-          <p>查詢系統</p>
-          <p>賽事重播</p>
-          <p id="last">聯絡我們</p>
-          <p id="rights">©2023 流體力學   |  Design by Xiang</p>
+          <h3><a class="block"href="index".html>流體力學</a></h3>
+          <a class="block">排行榜</a>
+          <a class="block" href="search_ID.html">查詢系統</ㄇ>
+          <a class="block"href="match.html">賽事重播</a>
+          <a class="block"id="last">聯絡我們</a>
+          <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
         </div>
         
       </div>

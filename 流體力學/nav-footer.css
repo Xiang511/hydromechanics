@@ -8,9 +8,9 @@
     margin: auto;
     background: #fffdfd;
   }
-  /* body::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     display: none;
-  }  */
+  } 
     /* 流體文字 */
     .container-fluid > a{
       font-size: 32px;
@@ -48,6 +48,14 @@
       background-color: #3f3939;
       background: #f2f3f4;
     }
+    .footer a{
+      margin-top: 10px;
+      text-decoration: none;
+      color: black;
+    }
+    .footer a:hover{
+      color: black;
+    }
     .footer .item1{
       width: 80%;
      
@@ -59,8 +67,11 @@
     .footer .item1 p{
       font-size: .9em;
     }
-   
+    .block{
+      display: block;
+    }
     .footer .item1 #rights{
       border-top: 1px solid black;
       padding-top: 10px;
+      margin-bottom: 10px;
     }
