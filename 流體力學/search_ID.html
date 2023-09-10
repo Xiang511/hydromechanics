@@ -29,58 +29,61 @@
       "positionClass": "toast-top-center",
     }
    </script>
-    <script type="text/javascript">
-        function showHint(str) {
-            var xmlhttp;
-
-            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
+   <script type="text/javascript">
+    var dateReviver = function (key, value) {
+        var a;
+        if (typeof value === 'string') {
+            a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+            if (a) {
+                return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4], +a[5], +a[6]));
             }
-            else {// code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    var result = xmlhttp.responseText;
-                    var obj = JSON.parse(result);//解析json字串為json物件形式
-
-                    var html = '<table class="table table-striped">';//
-
-                    for (var i = 0; i < obj.length; i++) {//
-                        html += '<tr>';//
-                        for (j = 0; j < obj[i].data.length; j++) {
-                            html += '<td>' + obj[i].data[j] + '</td>';
-                        }
-                        html += '</tr>';
-                    }
-                    html += "</table>";
-                   
-                    document.getElementById("order_status").innerHTML = html;
-                    if(obj.length > 8){
-                        let div = document.getElementById('result');
-                        div.style.height = '100%';
-                    }else{
-                        let div = document.getElementById('result');
-                        div.style.height = '350px';
-                    }
-                    if (obj.length == 1){
-                      //只有一筆代表查不到資料
-                        alert('查無資料');
-                        document.getElementById("uid").value  ="";
-                        
-                        toastr.warning( "請重新輸入" );
-                    } 
-                    else{
-                       toastr.success( "Success" );
-
-                    }
-                }
-
-            }
-            var url = "https://script.google.com/macros/s/AKfycbxKynT5kmMUwLXwaOx2WJIdan8njItYwHdzvDCiu_5sHwCd8myjUIAWsGVjHq9N1Alh/exec";
-            xmlhttp.open("get", url + "?uid=" + encodeURIComponent(str), true);
-            xmlhttp.send();
         }
+        return value;
+    };
+    function bestdaylong_inq(orderID)
+    {
+    var xmlhttp;
+    
+            if (window.XMLHttpRequest)
+              {// code for IE7+, Firefox, Chrome, Opera, Safari
+              xmlhttp=new XMLHttpRequest();
+              }
+            else
+              {// code for IE6, IE5
+              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+              }
+            xmlhttp.onreadystatechange=function()
+              {
+                      if (xmlhttp.readyState==4 && xmlhttp.status==200)      
+                      {
+                            var result=xmlhttp.responseText;
+                            var obj = JSON.parse(result,dateReviver);//解析json字串為json物件形式
+                                                    
+                            var html = '<table class="table table-striped">';//
+                            
+                            for (var i = 0; i < obj.length; i ++ ) {//
+                                    html  += '<tr>';//
+                                    for(j=0;j<obj[i].data.length;j++)
+                                    {
+                                      html+= '<td>'+obj[i].data[j]+'</td>';
+                                    }
+                                    html  += '</tr>';            
+                            }
+                            html+="</table>";
+                            if(obj.length > 8){
+                            let div = document.getElementById('result');
+                            div.style.height = '100%';
+                            }
+                            document.getElementById("order_status").innerHTML=html;
+                            if(obj.length==1) //只有一筆代表查不到資料
+                                    alert('查無資料');
+                      }
+    
+              }
+        var url="https://script.google.com/macros/s/AKfycbzuowwdCX-NaEXWOMoH_3NcSuF-B7BmetbUAOmacWYLT795DlpXgqIfIiEp5etasu43/exec";
+        xmlhttp.open("get",url+"?orderID="+orderID,true);
+        xmlhttp.send();
+    }
     </script>
     
     <style> 
@@ -114,7 +117,7 @@
           display: flex;
           justify-content: center;
         }
-        .form #uid{
+        .form #orderID{
           width: 150%;
           margin-right: 8px;
         }
@@ -125,7 +128,7 @@
         
        
         @media screen and (min-width:768px){
-          .form #uid{
+          .form #orderID{
            width: 400px;
           }
           
@@ -200,8 +203,9 @@
       <div class="item2">
         
         <div class="form">
-            <input type="text" id="uid" class="form-control "placeholder="輸入IGN/LINEID/all" onclick="document.getElementById('uid').value=''"/> 
-            <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="showHint(uid.value);">
+            <input id="atmNO" type="text" style="display: none;"><br />
+            <input type="text" id="orderID" class="form-control "placeholder="輸入IGN/LINEID/all" onclick="document.getElementById('orderID').value=''"/> 
+            <input type="button" class="btn btn-primary"  name="inq" value="查詢" onclick="bestdaylong_inq(orderID.value,atmNO.value);">
         </div>
        
       </div>
@@ -216,11 +220,30 @@
         <div class="footer">
     
           <div class="item1">
-            <h3><a class="block"href="index".html>流體力學</a></h3>
-            <a class="block">排行榜</a>
-            <a class="block" href="search_ID.html">查詢系統</ㄇ>
-            <a class="block"href="match.html">賽事重播</a>
-            <a class="block"id="last">聯絡我們</a>
+             <h3><a class="block"href="index".html>流體力學</a></h3>
+            <div class="item4">
+             
+              <div class="item3">
+                <a class="block">排行榜</a>
+                <a class="block" href="search_ID.html">查詢系統</ㄇ>
+                <a class="block"href="match.html">賽事重播</a>
+                <a class="block"id="last">聯絡我們</a>
+              </div>
+              
+              <div class="item3" id="right">
+                <a class="block">更新進度</a>
+                <a class="block" href="">關於我們</ㄇ>
+                <a class="block"id="last">RoyaleAPI</a>
+              </div>
+              <div class="item5">
+                
+              </div>
+              <div class="item6">
+                <a href="https://SiteStates.com" title="站長工具">
+                  <img src="https://SiteStates.com/show/image/33540.jpg" border="0" />
+              </a>
+              </div>
+            </div>
             <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
           </div>
           

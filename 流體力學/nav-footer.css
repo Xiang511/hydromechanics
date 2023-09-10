@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    /* border: 1px solid; */
   }
   /* https://xiang511.github.io/hydromechanics/%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8/ 發布網址*/
   body{
@@ -67,9 +68,36 @@
     .footer .item1 p{
       font-size: .9em;
     }
+    .footer .item3 ,.item6{
+      width: 80px;
+      
+    }
+    @media screen and (min-width:768px){
+      .footer #right{
+      margin-left: 30px;
+    }  
+    }
+    @media screen and (max-width:767px){
+      .footer #right{
+        display: none;
+      }  
+    }
+    
+    .footer .item4{
+      display: flex;
+    }
+    .footer .item5{
+      flex-grow: 1;
+    }
+    .footer .item6{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     .block{
       display: block;
     }
+  
     .footer .item1 #rights{
       border-top: 1px solid black;
       padding-top: 10px;
