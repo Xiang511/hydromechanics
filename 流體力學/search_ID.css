@@ -1,0 +1,66 @@
+html, body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap{
+    flex-grow: 1;
+  }
+  .wrap img{
+    height: 420px;/*自訂*/
+   
+  }
+  .wrap h1{
+    display: block;
+    text-align: center;
+  }
+  .wrap .item{
+    height: 100px;
+    background-color: #C0C0C0;
+  }
+  .item2{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form{
+    display: flex;
+    justify-content: center;
+  }
+  .form #orderID{
+    width: 150%;
+    margin-right: 8px;
+  }
+  #order_status{
+    justify-content: center;
+    background-color: #eee;
+  }
+  
+ 
+  @media screen and (min-width:768px){
+    .form #orderID{
+     width: 400px;
+    }
+    
+  }
+
+  @media screen and (max-width:400px){
+    #order_status{
+    font-size: .75em;
+  }
+  }
+
+  .result{
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+  }
+  .footer {
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3f3939;
+    background: #f2f3f4;
+  }

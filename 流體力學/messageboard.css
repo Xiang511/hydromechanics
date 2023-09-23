@@ -1,0 +1,92 @@
+.form{
+    display: flex;
+    justify-content: center;
+  }
+  .form #orderID{
+    width: 150%;
+    margin-right: 8px;
+  }
+  #order_status{
+    justify-content: center;
+    background-color: #eee;
+  }
+  
+  
+  @media screen and (min-width:768px){
+    .form #orderID{
+     width: 400px;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width:400px){
+    #order_status{
+    font-size: .75em;
+  }
+  
+}
+  
+.result{
+    margin-top: 5px;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    height: 50%;
+}
+.footer {
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #3f3939;
+    background: #f2f3f4;
+}
+  
+  
+#offcanvasRight{
+      width: 40%;}
+    @media screen and (max-width:1200px){
+      #offcanvasRight{
+      width: 80%;}
+}
+  
+.offcanvas-body{
+    height: 100%;
+}
+.offcanvaswrap{
+    height: 90%;
+}
+.marginwrap{
+    height: 10%;
+}
+.offcanvaswrap .form-control{
+    width: 100%;
+}
+#mt-10{
+    margin-top: 10px;
+}
+#offcanvasRightLabel{
+    margin-top: 9px;
+}
+.formcontainer{
+     margin-top: 15px;
+}
+.formcontainer .wrap{
+    margin-top: 10px;
+}
+.formcontainer  textarea{
+    margin-top: -10px;
+}
+.formcontainer .wrap {
+    width: 100%;
+}
+.formcontainer .wrap input{
+    width: 49%;
+}
+    
+@media screen and (max-width:768px){
+    .offcanvaswrap .form-control{
+      width: 100%;
+    }
+}

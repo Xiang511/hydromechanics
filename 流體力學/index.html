@@ -3,434 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>流體力學-首頁</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="nav-footer.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="messageboard.css">
+    <link rel="stylesheet" href="nav.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="message.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;900&display=swap" rel="stylesheet">
+
+
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet"  />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-    <script type="text/javascript">
-        // var dateReviver = function (key, value) {
-        //     var a;
-        //     if (typeof value === 'string') {
-        //         a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
-        //         if (a) {
-        //             return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4], +a[5], +a[6]));
-        //         }
-        //     }
-        //     return value;
-        // };
-        function bestdaylong_inq(orderID)
-        {
-        var xmlhttp;
-        
-                if (window.XMLHttpRequest)
-                  {// code for IE7+, Firefox, Chrome, Opera, Safari
-                  xmlhttp=new XMLHttpRequest();
-                  }
-                else
-                  {// code for IE6, IE5
-                  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                  }
-                xmlhttp.onreadystatechange=function()
-                  {
-                          if (xmlhttp.readyState==4 && xmlhttp.status==200)      
-                          {
-                                var result=xmlhttp.responseText;
-                                var obj = JSON.parse(result);//解析json字串為json物件形式
-                                                        
-                                var html = '<table class="table table-striped">';//
-                                
-                                for (var i = 0; i < obj.length; i ++ ) {//
-                                        html  += '<tr>';//
-                                        for(j=0;j<obj[i].data.length;j++)
-                                        {
-                                          html+= '<td>'+obj[i].data[j]+'</td>';
-                                        }
-                                        html  += '</tr>';            
-                                }
-                                html+="</table>";
-                                if(obj.length > 8){
-                                let div = document.getElementById('result');
-                                div.style.height = '70%';
-                                }
-                                document.getElementById("order_status").innerHTML=html;
-                                
-                          }
-        
-                  }
-            var url="https://script.google.com/macros/s/AKfycbzElD39L1_NPPfjIxNXTUSu2hz7CKhVxT8zC9xQvPGWrWpPPx_uKbALdsXg-b1p4C8O/exec";
-            xmlhttp.open("get",url+"?orderID="+orderID,true);
-            xmlhttp.send();
-        }
-        </script>
-       <script type="text/javascript">
-        var dateReviver = function (key, value) {
-            var a;
-            if (typeof value === 'string') {
-                a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
-                if (a) {
-                    return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4], +a[5], +a[6]));
-                }
-            }
-            return value;
-        };
-        function bestdaylong_inq(orderID)
-        {
-        var xmlhttp;
-        
-                if (window.XMLHttpRequest)
-                  {// code for IE7+, Firefox, Chrome, Opera, Safari
-                  xmlhttp=new XMLHttpRequest();
-                  }
-                else
-                  {// code for IE6, IE5
-                  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                  }
-                xmlhttp.onreadystatechange=function()
-                  {
-                          if (xmlhttp.readyState==4 && xmlhttp.status==200)      
-                          {
-                                var result=xmlhttp.responseText;
-                                var obj = JSON.parse(result,dateReviver);//解析json字串為json物件形式
-                                                        
-                                var html = '<table class="table  table-striped">';//
-                                
-                                for (var i = 0; i < obj.length; i ++ ) {//
-                                        html  += '<tr>';//
-                                        for(j=0;j<obj[i].data.length;j++)
-                                        {
-                                          html+= '<td>'+obj[i].data[j]+'</td>';
-                                        }
-                                        html  += '</tr>';            
-                                }
-                                html+="</table>";
-                                if(obj.length > 8){
-                                let div = document.getElementById('result');
-                                div.style.height = '70%';
-                                }
-                                document.getElementById("order_status").innerHTML=html;
-                                
-                          }
-        
-                  }
-            var url="https://script.google.com/macros/s/AKfycbzUUEP6dexpj7BAOL2rRv1dq44WFys9dAoqOKZqbcSiWlcDKboDmS4ddaLub-bwWdop/exec";
-            xmlhttp.open("get",url+"?orderID="+orderID,true);
-            xmlhttp.send();
-        }
-        </script>
-    <style>
-        html, body{
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-        }
-        .wrap{
-          flex-grow: 1;
-        }
-        .color{
-            background-color: #C0C0C0;
-        }
-        section{
-            width: 100%;
-            height: 100%;
-            margin: 0px auto 46px;
-        }
-        section .background{
-            /* background-color: #F8F9FA; */
-        }
-        section .width{
-            width: 80%;
-            margin: auto;
-        }
-        section .item h3{
-            margin-top: 10px;
-        }
-        .width .item{
-            margin-top: 24px;
-        }
-        .progress{
-            height: 35px;
-        }
-        .footer {
-          /* margin-top: 18px; */
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          background-color: #3f3939;
-          background: #f2f3f4;
-        }
-        
-    </style>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>  
+
+
 </head>
-<body class="d-flex flex-column h-100">
-     <!-- Navigation-->
-     <nav class="navbar sticky-top navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" id="nav">
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">首頁</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">排行榜</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        人員查詢
-                        </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
-                            </ul>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link " href="match.html">賽事重播</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="Version.html">更新進度</a>
-                    </li>
-                    <li class="nav-item"> 
-                        <button  class="b nav-link " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">留言區</button>
-                      </li>
-              
-                </ul>
+<body>
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">排行榜</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            人員查詢
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" href="match.html">賽事重播</a>
+                        </li>
+                        <li class="nav-item"> 
+                            <button  class="b nav-link " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">留言區</button>
+                          </li>
+                  
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div class="wrap">
-        <main class="flex-shrink-0">
-            <!-- Header-->
-            <header class="color py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-black mb-2 ">這裡是流體力學</h1>
-                                     <p class="lead fw-normal text-black mb-4 ">
-        
-                                    </p>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <!-- <a class="btn btn-light btn-lg px-4 me-sm-3 colorBlack" href="#new">開始瀏覽!</a> -->
-                                    <!-- <a class="btn btn-outline-light btn-lg px-4" href="https://www.instagram.com/isu_mae/">來看看我們的IG</a> -->
+        </nav>
+    </header>
+
+   
+
+
+    <div class="wrap">  
+
+        <!-- banner -->
+        <div id="banner">
+            <div class="bg-wrap">
+                <img  class="video_bg" src="img/banner.png" alt="">
+                <!-- <video class="video_bg" preload="auto" autoplay="true" loop="loop" muted="muted">
+                    <source src="img/3571423180.mp4" type="video/mp4">
+                </video> -->
+            </div> 
+            <!-- <div class="content">
+                <h1>流體力學</h1>
+                <p>this is a website cover</p>
+              </div> -->
+        </div> 
+        <!-- banner -->
+
+        <div class="ce">
+            <section>
+                <div class="cards" id="first">
+                    <div class="fir">
+                        <div class="card" id="first-card">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="img/bg1.png">
                                 </div>
-                            </div>
+                                <div class="txt">
+                                  <h3>流體力學</h3>
+                               
+                                   <p>May2023全球排名 16</p>
+                                   <p>May2023台灣排名 1</p>
+                                    <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                </div>
+                            </a>
                         </div>
-        
-                        <div id="carouselExampleIndicators" class="carousel slide col-xl-5 col-xxl-6 d-none d-xl-block text-center" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="img/img1.png" class="d-block w-100" alt="...">
-                              </div>
-                              <!-- <div class="carousel-item">
-                                <img src="img/img2.png" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="img/slider3.png" class="d-block w-100" alt="...">
-                              </div>
-                            </div> -->
-                            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button> -->
-                          </div>
+                        <div class="card" id="card-hidden-lg">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="img/bg2.png">
+                                </div>
+                                <div class="txt">
+                                    <h3>排行榜</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </header>
-        <!-- Blog preview section-->
-            <section>
-            </br>
-                <div class="background">
-                    <div class="width">
-                        <div class="item">
-                            <h3>留言板</h3>
+                    <div class="cards">
+                        <div class="sec">
+                            <div class="card" id="card-hidden-lg-two">
+                                <a href="search_ID.html">
+                                    <div class="pic">
+                                        <img src="img/bg3.png">
+                                    </div>
+                                    <div class="txt">
+                                        <h3>查詢系統</h3>
+                                        <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="img/bg4.png">
+                                    </div>
+                                    <div class="txt">
+                                        <h3>賽事重播</h3>
+                                        <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                               <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                    <div class="pic">
+                                        <img src="img/bg5.png">
+                                    </div>
+                                    <div class="txt">
+                                            <h3>留言區</h3>
+                                        <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                    </div>
+                                </button>
+                            </div>
+                            <div class=" card card-hidden">
+                                <a href="#">
+                                    <div class="pic">
+                                        <img src="img/bg2.png">
+                                    </div>
+                                    <div class="txt">
+                                        <h3>排行榜</h3>
+                                        <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" card card-hidden">
+                                <a href="search_ID.html">
+                                    <div class="pic">
+                                        <img src="img/bg3.png">
+                                    </div>
+                                    <div class="txt">
+                                        <h3>查詢系統</h3>
+                                        <!-- <p>Lorem ipsum dolor sit amet consec</p> -->
+                                    </div>
+                                </a>
+                            </div>
+            
                         </div>
+                    </div>
+            </section>
+        </div>
+        
+      
+            <div class="item">
+                <div class="title">
+                    <h3>賽事重播</h3>
+                    <p><em>未來也將不定時舉辦現役職業選手挑戰賽</em></p>
+                </div>
+            </div>
+            
+            <div class="frame">
+                <div class="cards">
+                    <div class="card-item">
+                            <div class="mp4">
+                                <div class="mv">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/APxjMyQfy4A?si=gP6YafKALMXWc2OK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="txt">
+                                <h4>流體力學vsTeamDragon交流賽！ClashRoyale</h4>
+                                <p>日期：2023年9月2日</p>
+                            </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="mp4">
+                             <div class="mv">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OKTTEchOurM?si=Y1ATxbYqe9lF-Nd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="txt">
+                            <h4>流體力學xHigher挑戰賽！ClashRoyale</h4>
+                            <p>日期：2023年7月22日</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                         <div class="mp4">
+                            <div class="mv">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/vuvbQ-6jq2E?si=TCaj09NINL22ZMQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                         <div class="txt">
+                            <h4>流體力學xLucas挑戰賽！ClashRoyale</h4>
+                            <p>日期：2023年6月25日</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+      
+            <div class="item">
+                <div class="title">
+                    <h3>更新進度</h3>
+                    <p><em>網站更新進度、未來規劃</em></p>
+                </div>
+            </div>
+            <div class="Version">
+                <div class="items-ver"> 
+                    <div class="item">
+                        <h3>首頁</h3>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
                         </div>
-                        <div class="item">
-                            <h3>查詢系統</h3>
+                    </div>  
+                    <div class="item">
+                        <h3>留言板</h3>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
                         </div>
+                    </div>
+                    <div class="item">
+                        <h3>查詢系統</h3>
                         <div class="progress" >
                             <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%" ></div>
                         </div>
 
-                        <div class="item">
-                            <h3>賽事查詢</h3>
-                        </div>
+                    </div>
+                   
+
+                    <div class="item">
+                        <h3>賽事查詢</h3>
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
                         </div>
-                        <div class="item">
-                            <h3>首頁</h3>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 12%"></div>
-                        </div>
-                        <div class="item">
-                            <h3>排行榜</h3>
-                        </div>
+                    </div>
+                   
+
+
+                   
+                  
+
+
+                    <div class="item">
+                        <h3>排行榜</h3>
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
                         </div>
-                        <div class="item">
-                            <h3>聯絡我們</h3>
-                        </div>
+                    </div>
+                    
+
+                    <div class="item">
+                        <h3>聯絡我們</h3>
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 5%"></div>
                         </div>
-    
                     </div>
-                </div>
-            </section>
-            <!-- <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6">
-                            <div class="text-center">
-                                <h1 class="fw-bolder" id="new">網站目前功能</h1>
-                                <p class="lead fw-normal text-muted mb-5"></p>
-                            </div>
+
+                    <div class="item">
+                        <h3>頁尾(重新設計</h3>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 5%"></div>
                         </div>
                     </div>
-                    <div class="row gx-5">
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top "  src="img/img1.svg" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">查詢系統v2-20230908</br>
-                                        </h5></a>
-                                    <p class="card-text mb-0">
-                                     </p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-        
-                                            <div class="small">
-                                                <div class="fw-bold">
-        
-                                                </div>
-        
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top"   src="img/img6.png" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">New</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">
-        
-                                        </h5></a>
-                                    <p class="card-text mb-0">
-        
-                                    </p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <div class="small">
-                                                <div class="fw-bold">
-        
-        
-                                                </div>
-        
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top "  src="img/pic1.png" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">New</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">
-                                        </br>
-                                        </h5></a>
-                                    <p class="card-text mb-0">
-        
-        
-                                    </p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <div class="small">
-                                                <div class="fw-bold">
-        
-        
-                                                </div>
-        
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-        
-                </div>
-            </section>
-        </main>
-    </div>
+                    
 
+                  
+                    
+
+                </div>
+            </div>
+    
+
+
+
+
+
+
+
+    </div>
+    
     <div class="footer">
     
-        <div class="item1">
-           <h3><a class="block"href="index".html>流體力學</a></h3>
-          <div class="item4">
+        <div class="title">
+                <h3><a class="block"href="index".html>流體力學</a></h3>
+                <div class="items">
            
-            <div class="item3">
-              <a class="block">排行榜</a>
-              <a class="block" href="search_ID.html">查詢系統</ㄇ>
-              <a class="block"href="match.html">賽事重播</a>
-              <a class="block"id="last">聯絡我們</a>
-            </div>
-            
-            <div class="item3" id="right">
-              <a class="block">更新進度</a>
-              <a class="block" href="">關於我們</ㄇ>
-              <a class="block"id="last">RoyaleAPI</a>
-            </div>
-            <div class="item5">
-              
-            </div>
-            <div class="item6">
-                <a href="https://SiteStates.com" title="站長工具">
-                    <img src="https://SiteStates.com/show/image/33541.jpg" border="0" />
-                </a>
-            </div>
-          </div>
+                    <div class="txt">
+                    <a class="block" href="#">排行榜</a>
+                    <a class="block" href="search_ID.html">查詢系統</a>
+                    <a class="block"href="#">賽事重播</a>
+                    <a class="block"id="last" href="#">聯絡我們</a>
+                    </div>
+                
+                    <div class="txt" id="right">
+                    <!-- <a class="block">更新進度</a>
+                    <a class="block" href="">關於我們</ㄇ>
+                    <a class="block"id="last">RoyaleAPI</a> -->
+                    </div>
+                    <div class="item-grow">
+                    
+                    </div>
+                    <div class="item-follow">
+                        <a href="https://SiteStates.com" title="站長工具">
+                            <img src="https://SiteStates.com/show/image/33541.jpg" border="0" />
+                        </a>
+                    </div>
+                </div>
           <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
         </div>
         
     </div>
-
+    
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" ">
         <div class="offcanvas-header">
           <h5 id="offcanvasRightLabel">這裡是留言區!</h5>
@@ -485,11 +397,124 @@
                  }, 100);    
               }
             </script>
+
+            <script type="text/javascript">
+                // var dateReviver = function (key, value) {
+                //     var a;
+                //     if (typeof value === 'string') {
+                //         a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+                //         if (a) {
+                //             return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4], +a[5], +a[6]));
+                //         }
+                //     }
+                //     return value;
+                // };
+                function bestdaylong_inq(orderID)
+                {
+                var xmlhttp;
+                
+                        if (window.XMLHttpRequest)
+                        {// code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {// code for IE6, IE5
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+                        {
+                                if (xmlhttp.readyState==4 && xmlhttp.status==200)      
+                                {
+                                        var result=xmlhttp.responseText;
+                                        var obj = JSON.parse(result);//解析json字串為json物件形式
+                                                                
+                                        var html = '<table class="table table-striped">';//
+                                        
+                                        for (var i = 0; i < obj.length; i ++ ) {//
+                                                html  += '<tr>';//
+                                                for(j=0;j<obj[i].data.length;j++)
+                                                {
+                                                html+= '<td>'+obj[i].data[j]+'</td>';
+                                                }
+                                                html  += '</tr>';            
+                                        }
+                                        html+="</table>";
+                                        if(obj.length > 8){
+                                        let div = document.getElementById('result');
+                                        div.style.height = '70%';
+                                        }
+                                        document.getElementById("order_status").innerHTML=html;
+                                        
+                                }
+                
+                        }
+                    var url="https://script.google.com/macros/s/AKfycbzElD39L1_NPPfjIxNXTUSu2hz7CKhVxT8zC9xQvPGWrWpPPx_uKbALdsXg-b1p4C8O/exec";
+                    xmlhttp.open("get",url+"?orderID="+orderID,true);
+                    xmlhttp.send();
+                }
+            </script>
+            <script type="text/javascript">
+                var dateReviver = function (key, value) {
+                    var a;
+                    if (typeof value === 'string') {
+                        a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);
+                        if (a) {
+                            return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4], +a[5], +a[6]));
+                        }
+                    }
+                    return value;
+                };
+                function bestdaylong_inq(orderID)
+                {
+                var xmlhttp;
+                
+                        if (window.XMLHttpRequest)
+                        {// code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp=new XMLHttpRequest();
+                        }
+                        else
+                        {// code for IE6, IE5
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        xmlhttp.onreadystatechange=function()
+                        {
+                                if (xmlhttp.readyState==4 && xmlhttp.status==200)      
+                                {
+                                        var result=xmlhttp.responseText;
+                                        var obj = JSON.parse(result,dateReviver);//解析json字串為json物件形式
+                                                                
+                                        var html = '<table class="table  table-striped">';//
+                                        
+                                        for (var i = 0; i < obj.length; i ++ ) {//
+                                                html  += '<tr>';//
+                                                for(j=0;j<obj[i].data.length;j++)
+                                                {
+                                                html+= '<td>'+obj[i].data[j]+'</td>';
+                                                }
+                                                html  += '</tr>';            
+                                        }
+                                        html+="</table>";
+                                        if(obj.length > 8){
+                                        let div = document.getElementById('result');
+                                        div.style.height = '70%';
+                                        }
+                                        document.getElementById("order_status").innerHTML=html;
+                                        
+                                }
+                
+                        }
+                    var url="https://script.google.com/macros/s/AKfycbzUUEP6dexpj7BAOL2rRv1dq44WFys9dAoqOKZqbcSiWlcDKboDmS4ddaLub-bwWdop/exec";
+                    xmlhttp.open("get",url+"?orderID="+orderID,true);
+                    xmlhttp.send();
+                }
+            </script>
+
+
           <div class="marginwrap">
       
           </div>
       </div>
         </div>
-      </div>
+    </div>
 </body>
 </html>

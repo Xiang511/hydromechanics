@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>人員查詢-流體力學</title>
-    <link rel="stylesheet" href="nav-footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="search_ID.css">
 
     <!-- slider -->
     <link rel="stylesheet" href="slider.css">
@@ -24,11 +26,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet"  />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
+    <!-- toastr script -->
    <script>
     toastr.options = {
       "positionClass": "toast-top-center",
     }
    </script>
+
+   <!-- 資料載入 -->
    <script type="text/javascript">
     var dateReviver = function (key, value) {
         var a;
@@ -86,112 +91,47 @@
     }
     </script>
     
-    <style> 
-        html, body{
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-        }
-        .wrap{
-          flex-grow: 1;
-        }
-        .wrap img{
-          height: 420px;/*自訂*/
-         
-        }
-        .wrap h1{
-          display: block;
-          text-align: center;
-        }
-        .wrap .item{
-          height: 100px;
-          background-color: #C0C0C0;
-        }
-        .item2{
-          height: 150px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .form{
-          display: flex;
-          justify-content: center;
-        }
-        .form #orderID{
-          width: 150%;
-          margin-right: 8px;
-        }
-        #order_status{
-          justify-content: center;
-          background-color: #eee;
-        }
-        
-       
-        @media screen and (min-width:768px){
-          .form #orderID{
-           width: 400px;
-          }
-          
-        }
 
-        @media screen and (max-width:400px){
-          #order_status{
-          font-size: .75em;
-        }
-        }
-    
-        .result{
-          width: 90%;
-          margin: auto;
-          overflow: auto;
-        }
-        .footer {
-          margin-top: 18px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          background-color: #3f3939;
-          background: #f2f3f4;
-        }
-   
-    </style>
+
+
 </head>
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" id="nav">
-                <li class="nav-item">
-                    <a class="nav-link " href="index.html">首頁</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">排行榜</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    人員查詢
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
-                        </ul>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link " href="match.html">賽事重播</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="Version.html">更新進度</a>
-                </li>
-          
-            </ul>
-        </div>
-    </div>
-</nav>
+
+   <nav class="navbar sticky-top navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"> <img src="img/icon.png" alt="Logo" width="44" height="38" class="d-inline-block align-text-top">流體力學</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav" id="nav">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">排行榜</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            人員查詢
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="search_ID.html">ID/LINE查詢</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item disabled" href="#">排名查詢</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" href="match.html">賽事重播</a>
+                        </li>
+                        <!-- <li class="nav-item"> 
+                            <button  class="b nav-link " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">留言區</button>
+                          </li> -->
+                  
+                    </ul>
+                </div>
+            </div>
+    </nav>
 
 
     <div class="wrap">
@@ -217,37 +157,39 @@
     </div>
        
 
-        <div class="footer">
+    <div class="footer">
     
-          <div class="item1">
-             <h3><a class="block"href="index".html>流體力學</a></h3>
-            <div class="item4">
-             
-              <div class="item3">
-                <a class="block">排行榜</a>
-                <a class="block" href="search_ID.html">查詢系統</ㄇ>
-                <a class="block"href="match.html">賽事重播</a>
-                <a class="block"id="last">聯絡我們</a>
-              </div>
+      <div class="title">
+              <h3><a class="block"href="index".html>流體力學</a></h3>
+              <div class="items">
+         
+                <div class="txt">
+                  <a class="block" href="#">排行榜</a>
+                  <a class="block" href="search_ID.html">查詢系統</a>
+                  <a class="block"href="#">賽事重播</a>
+                  <a class="block"id="last" href="#">聯絡我們</a>
+                  </div>
               
-              <div class="item3" id="right">
-                <a class="block">更新進度</a>
-                <a class="block" href="">關於我們</ㄇ>
-                <a class="block"id="last">RoyaleAPI</a>
+              
+                  <div class="txt" id="right">
+                  <!-- <a class="block">更新進度</a>
+                  <a class="block" href="">關於我們</ㄇ>
+                  <a class="block"id="last">RoyaleAPI</a> -->
+                  </div>
+                  <div class="item-grow">
+                  
+                  </div>
+                  <div class="item-follow">
+                      <a href="https://SiteStates.com" title="站長工具">
+                          <img src="https://SiteStates.com/show/image/33541.jpg" border="0" />
+                      </a>
+                  </div>
               </div>
-              <div class="item5">
-                
-              </div>
-              <div class="item6">
-                <a href="https://SiteStates.com" title="站長工具">
-                  <img src="https://SiteStates.com/show/image/33540.jpg" border="0" />
-              </a>
-              </div>
-            </div>
-            <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
-          </div>
-          
-        </div>
+        <a class="block"id="rights">©2023 流體力學   |  Design by Xiang</a>
+      </div>
+      
+    </div>
+    
    
 </body>
 </html>
