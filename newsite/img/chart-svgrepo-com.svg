@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 32 32" xml:space="preserve">
+<style type="text/css">
+	.cubies_twintig{fill:#F9E0BD;}
+	.cubies_vierentwintig{fill:#F2C7B5;}
+	.cubies_tweeentwintig{fill:#D97360;}
+	.cubies_drieentwintig{fill:#E69D8A;}
+	.cubies_twaalf{fill:#FFF2DF;}
+	.st0{fill:#C9483A;}
+	.st1{fill:#F2C99E;}
+	.st2{fill:#98D3BC;}
+	.st3{fill:#CCE2CD;}
+	.st4{fill:#65C3AB;}
+	.st5{fill:#4C4842;}
+	.st6{fill:#67625D;}
+	.st7{fill:#EDEAE5;}
+	.st8{fill:#C9C6C0;}
+	.st9{fill:#EDB57E;}
+	.st10{fill:#2EB39A;}
+	.st11{fill:#BCD269;}
+	.st12{fill:#D1DE8B;}
+	.st13{fill:#EC9B5A;}
+	.st14{fill:#837F79;}
+	.st15{fill:#A5A29C;}
+	.st16{fill:#8E7866;}
+	.st17{fill:#725A48;}
+	.st18{fill:#A4C83F;}
+	.st19{fill:#E3D4C0;}
+</style>
+<g>
+	<path class="cubies_twintig" d="M29,32H3c-1.657,0-3-1.343-3-3V3c0-1.657,1.343-3,3-3h26c1.657,0,3,1.343,3,3v26
+		C32,30.657,30.657,32,29,32z"/>
+	<path class="cubies_twaalf" d="M27,32H3c-1.657,0-3-1.343-3-3V3c0-1.657,1.343-3,3-3h24c1.657,0,3,1.343,3,3v26
+		C30,30.657,28.657,32,27,32z"/>
+	<path class="cubies_vierentwintig" d="M16,29h-2c-0.552,0-1-0.448-1-1V18c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v10
+		C17,28.552,16.552,29,16,29z"/>
+	<path class="cubies_tweeentwintig" d="M11,29H9c-0.552,0-1-0.448-1-1V7c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v21
+		C12,28.552,11.552,29,11,29z M22,28V4c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v24c0,0.552,0.448,1,1,1h2
+		C21.552,29,22,28.552,22,28z"/>
+	<path class="cubies_drieentwintig" d="M6,29H4c-0.552,0-1-0.448-1-1V13c0-0.552,0.448-1,1-1h2c0.552,0,1,0.448,1,1v15
+		C7,28.552,6.552,29,6,29z M27,28V10c0-0.552-0.448-1-1-1h-2c-0.552,0-1,0.448-1,1v18c0,0.552,0.448,1,1,1h2
+		C26.552,29,27,28.552,27,28z"/>
+</g>
+</svg>

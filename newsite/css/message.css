@@ -1,0 +1,201 @@
+::-webkit-scrollbar {
+
+    width: .5px;
+
+}
+
+::-webkit-scrollbar-button {
+
+    background: transparent;
+
+    border-radius: 4px;
+
+}
+
+::-webkit-scrollbar-track-piece {
+
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 4px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* border: 1px solid slategrey; */
+
+}
+
+::-webkit-scrollbar-track {
+
+    box-shadow: transparent;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    /* font-family: "Poppins",sans-serif; */
+    font-family: 'Noto Sans TC', sans-serif;
+    /* border: 1px solid; */
+}
+.wrap{
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.title h1{
+    /* height: 3vh; */
+    text-align: center;
+    padding: 8px;
+    margin-top: .3em;
+    letter-spacing: .2em;
+}
+/* .title h1:hover{
+    color: rgb(67, 17, 167);
+    scale: 1.4;
+    font-weight: 700;
+} */
+
+.grow{
+    flex-grow: 1;
+}
+.data{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 60vh;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.form{
+    position: fixed;
+    bottom:-1.3em;
+    left: 50%;
+    transform: translate(-50%);
+    height: 30vh;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    
+
+}
+/* footer{
+    margin-top: .5em;
+} */
+.input-control{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.input-item{
+    width: 50%;
+}
+#name{
+    margin-bottom: .3em;
+}
+.txt-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 50%;
+}
+.txt-items a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;    
+}
+.txt-items a:hover{
+    scale: 1.4;
+}
+.txt-items img{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.3em;
+    margin-top: 0.2em;
+    vertical-align: sub;
+}
+.txt-items span{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.txt-items p{
+    padding-right: 10px;
+    font-size: .8em;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+.input-control #name, .input-control #remark{
+    width: 100%;
+}
+
+textarea{
+    height: 4em;
+}
+#submit{
+    margin-top: 0.5em;
+    width: 47%;
+}
+#loadbutton{
+    margin-top: 0.5em;
+    width: 47%;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #dddcdc;
+}
+#myTable_paginate{
+    margin-top: 0.5em;
+}
+.dataTables_length{
+    display: none;
+}
+#myTable_previous , #myTable_next{
+    display: none;
+}
+#myTable_info{
+    display: none;
+}
+
+
+
+@media screen and (min-width:768px){
+    #submit{
+        margin-top: 0.5em;
+        width: 49%;
+    }
+    #loadbutton{
+        margin-top: 0.5em;
+        width: 49%;
+    }
+    .txt-items span{
+        font-size: 2em;
+        font-weight: 700;
+    }
+    .txt-items img{
+        width: 2em;
+        height: 2em;
+    }
+    .txt-items{
+        width: 40%;
+    }
+}
+@media screen and (min-width:1560px){
+    .data{
+        width: 100%;
+    }
+    .txt-items{
+        width: 35%;
+    }
+}
