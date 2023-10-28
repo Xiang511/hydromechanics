@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+    /* border: 1px solid; */
+}
+
+#search{
+    font-weight: 700;
+}
+#search h1{
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.btn{
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    background: blue;
+    font-size: 1em;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#result{
+}   
+#sidebar .brand .fa {
+	min-width: 60px;
+	display: flex;
+	justify-content: center;
+}
+#myTable_previous, #myTable_next{
+    display: none;
+}
+.dataTables_filter{
+    margin-bottom: 1em;
+}
+#myTable_paginate .paginate_button{
+    /* padding: 0.2em 0.4em; */
+    padding: 0.5em 1em;
+    background: none;
+    border: none;
+}
+#myTable_paginate .paginate_button.current{
+    scale: 1.4;
+}
+
+@media screen and (max-width:768px){
+    #myTable_length{
+        /* visibility: hidden; */
+        display: none;
+    }
+}
+@media screen and (max-width:552px){
+    #myTable_paginate .paginate_button{
+        /* padding: 0.2em 0.4em; */
+        padding: 0;
+        background: none;
+        border: none;
+    }
+    #myTable_paginate .paginate_button{
+       padding: 0.1em;
+    }
+}
+
+
+#sidebar .side-menu .undone {
+	opacity: 0.2;
+}
+#content main .table-data .head h3 {
+    font-size: 1.4em;
+}
+.completed address a{
+    font-style: normal;
+
+}
