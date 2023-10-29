@@ -54,7 +54,7 @@
     #myTable th{
         font-size: 0.7em !important;
     }
-    /* #sidebar.hide {
+    #sidebar.hide {
         position: absolute;
         width: 60px;
         left: -5em;
@@ -65,7 +65,7 @@
     }
     #content nav::before {
         border-radius: 0; 
-    } */
+    }
    
 }
 
