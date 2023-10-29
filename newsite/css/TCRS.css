@@ -87,6 +87,11 @@
        padding: 0.1em;
     }
 }
+@media screen and (max-width:640px){
+    #myTable_filter{
+        text-align: left;
+    }
+}
 
 
 #sidebar .side-menu .undone {
