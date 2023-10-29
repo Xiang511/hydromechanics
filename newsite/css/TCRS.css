@@ -49,13 +49,34 @@
     scale: 1.4;
 }
 
+@media screen and (max-width:992px){
+   
+    #myTable th{
+        font-size: 0.7em !important;
+    }
+    /* #sidebar.hide {
+        position: absolute;
+        width: 60px;
+        left: -5em;
+    }
+    #sidebar.hide ~ #content {
+        width: 100%;
+        left: 0px;
+    }
+    #content nav::before {
+        border-radius: 0; 
+    } */
+   
+}
+
 @media screen and (max-width:768px){
     #myTable_length{
         /* visibility: hidden; */
         display: none;
     }
 }
-@media screen and (max-width:552px){
+
+@media screen and (max-width:576px){
     #myTable_paginate .paginate_button{
         /* padding: 0.2em 0.4em; */
         padding: 0;

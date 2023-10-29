@@ -71,7 +71,7 @@ function bestdaylong_inq(orderID) {
 
             columnDefs: [{ orderable: false, targets: 0 }
                         // { "width": "25%", "targets": 0 },
-                        ,{ "width": "14   %", "targets": [0,1,2,3,4,5] }
+                        // ,{ "width": "14   %", "targets": [0,1,2,3,4,5] }
                     ]
 
         });
