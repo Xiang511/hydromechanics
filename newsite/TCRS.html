@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>台灣皇室排名系統</title>
+
+	<link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" /> <link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- icon -->
+	
+	<link rel="stylesheet" href="css/TCRSoriginal.css">
+	<link rel="stylesheet" href="css/TCRS.css">
+
+
+
+	<!-- jQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- jQUERY -->
+
+	<!-- datatables -->
+	<!-- main -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+  
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+	<!-- main -->
+
+	<!-- fixed col -->
+	<link rel="stylesheet" href=https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
+
+	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+	<!-- fixed col -->
+	
+	<!-- 表格拖拉 -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
+
+	<script src="https://cdn.datatables.net/colreorder/1.7.0/js/dataTables.colReorder.min.js"></script>
+	<!-- 表格拖拉 -->
+	<!-- datatables -->
+
+	<script src="js/fetchdata.js"></script>
+	
+</head>
+<body>
+	<a href="https://SiteStates.com" title="站長工具" style="display: none;">
+		<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
+	</a>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">	
+			<!-- <i class='bx bxs-smile'></i> -->
+			<i class='fa fa-bar-chart'></i>
+			<span class="text">TCRS</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="TCRS.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">天梯紀錄</span>
+				</a>
+			</li>
+			<li>
+				<a href="TCRS2.html">
+					<i class='bx bxs-grid-alt'></i>
+					<span class="text">生涯紀錄</span>
+				</a>
+			</li>
+			<li>
+				<a href="message.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">聊天室</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a href="#">
+					<i class='bx bx-comment-detail'></i>
+					<span class="text">常見問題</span>
+				</a>
+			</li> -->
+			<li class="undone">
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">圖表競賽(尚未完成)</span>
+				</a>
+			</li>
+			<li class="undone">
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">個人資料(尚未完成)</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="https://www.google.com.tw/?hl=zh_TW" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">登出</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<!-- <a href="#" class="nav-link">Categories</a> -->
+			<form action="#">
+				<!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<!-- <label for="switch-mode" class="switch-mode"></label> -->
+				<!-- <a href="#" class="notification">
+					<i class='bx bxs-bell' ></i>
+					<span class="num"></span>
+				</a> -->
+			<a href="https://xiang511.github.io/hydromechanics/newsite/index.html" class="profile">
+				<img style="border-radius: 0;" src="img/purr-svgrepo-com.svg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>台灣皇室排名系統</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">天梯紀錄</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">天梯評分</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a> -->
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>11/7</h3>
+						<p>下次更新時間</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>114</h3>
+						<p>紀錄人數</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>58</h3>
+						<p>部落參與</p>
+					</span>
+				</li>
+				
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<section class="search" id="search">
+						<div class="title">
+							<div class="center">
+								<h1>天梯歷史評分</h1>
+							</div>
+						</div>
+						<div class="form">
+							<input id="atmNO" type="text" style="display: none;"><br />
+							<input type="text" id="orderID" placeholder=""value="all" disabled
+							style="display: none;"
+							onclick="document.getElementById('orderID').value=''"/>
+						</div>
+						<div class="result" id="result">
+						  <span id="order_status"></span>
+					  </div>
+					</section>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>常見問題</h3>
+						<!-- <i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i> -->
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>
+								<small>手機建議使用電腦版網站查看，提升觀看體驗</small>
+								
+							</p>
+							
+							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
+						</li>
+						<li class="not-completed">
+							<p>
+								<small>如果您的資訊沒有出現在上面的話，請遵照格式重新填寫
+									<a href="https://forms.gle/vuPKgqkamhDtog9v9">表單</a>
+								，並耐心等待</small>
+								
+							</p>
+							
+							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
+						</li>
+					</ul>
+					<div class="head" style="margin-top: 1.4em;">
+						<h3>目前功能</h3>
+						<!-- <i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i> -->
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>拖曳排序</p>
+						</li>
+						<li class="not-completed">
+							<p>透過拖曳操作對表中的標題進行重新排序</p>
+						</li>
+					</ul>
+					<div class="head" style="margin-top: 1.4em;">
+						<h3>聯絡我們</h3>
+						<!-- <i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i> -->
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+								<address >
+									<p>
+										<a href="mailto:xiangtcrs@gmail.com">
+										xiangtcrs@gmail.com</a>
+									</p>
+								</address>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="js/dashboard.js"></script>
+</body>
+</html>
