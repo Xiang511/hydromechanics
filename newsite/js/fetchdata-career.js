@@ -31,6 +31,7 @@ function bestdaylong_inq(orderID) {
             var html = '<table id="myTable" class="cell-border hover">';
             html += '<thead>';
             html += '<tr>';
+            html += '<th>Rank</th>';
             html += '<th>IGN</th>';
             html += '<th>勝率</th>';
             html += '<th>對戰次數</th>';
@@ -59,22 +60,29 @@ function bestdaylong_inq(orderID) {
                 alert('查無資料');
         }
         let table = new DataTable('#myTable', {
-            order: [[1, 'dsc']],
+            order: [[2, 'dsc']],
             info: false,
             // paging: false
             processing: true,
             // 表格拖拉
-            colReorder: true,
-            colReorder: {
-                fixedColumnsLeft: 1
-            },
+            // colReorder: true,
+            // colReorder: {
+            //     fixedColumnsLeft: 1
+            // },
 
             columnDefs: [{ orderable: false, targets: 0 }
                         // { "width": "25%", "targets": 0 },
-                        // ,{ "width": "14   %", "targets": [0,1,2,3,4,5] }
+                        // { "width": "5   %", "targets": [1,2,3,4] }
                     ]
+            
 
         });
+        // 自動序列
+        table.on( 'order.dt search.dt', function () {
+            table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                cell.innerHTML = i+1;
+            } );
+        } ).draw();
     }
     var url = "https://script.google.com/macros/s/AKfycbzErhtEAqr83yMm0DdHpkKdCtiiX2R6N6T6-xc7u59Yk6KG-zYLvbT4vomKxe68d1DHTw/exec";
     xmlhttp.open("get", url + "?orderID=" + orderID, true);

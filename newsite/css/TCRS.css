@@ -51,7 +51,7 @@
 
 @media screen and (max-width:992px){
    
-    #myTable th{
+    #myTable{
         font-size: 0.7em !important;
     }
     #sidebar.hide {
@@ -66,6 +66,7 @@
     #content nav::before {
         border-radius: 0; 
     }
+    
    
 }
 
@@ -74,6 +75,29 @@
         /* visibility: hidden; */
         display: none;
     }
+    .table-data .txt h2{
+       font-size: 1.2em;
+    }
+    .table-data .order .txt p{
+        font-size:0.8em; 
+    }
+    .table-data .order .txt li{
+        margin-top: 0.5em;
+        font-size: 0.7em;
+    }
+    .table-data .order .txt p{
+        line-height: 1.5em;
+    }
+}
+
+@media screen and (max-width:640px){
+    #myTable_filter{
+        text-align: left;
+    }
+    /* .table-data .txt .pic img{
+        width: 7em;
+        height: 6em;   
+    } */
 }
 
 @media screen and (max-width:576px){
@@ -86,13 +110,23 @@
     #myTable_paginate .paginate_button{
        padding: 0.1em;
     }
+    /* .table-data .txt .pic img{
+        width: 5em;
+        height: 4em;   
+    } */
 }
-@media screen and (max-width:640px){
-    #myTable_filter{
-        text-align: left;
-    }
+@media screen and (max-width:400px){
+    /* .table-data .txt .pic img{
+        display: none;
+    } */
 }
 
+@media screen and (min-width:768px){
+    /* .table-data .txt .pic img{
+        width: 7em;
+        height: 6.2em;   
+    }  */
+}
 
 #sidebar .side-menu .undone {
 	opacity: 0.2;
@@ -103,4 +137,62 @@
 .completed address a{
     font-style: normal;
 
+}
+
+.todo-list .completed a:visited , .not-completed a{
+    color: blue;
+}
+.table-data h1{
+ 
+}
+.table-data .txt{
+    position: relative;
+}
+.table-data .txt h2{
+    margin-top: 1.8em;
+    padding-bottom: .2em;
+    margin-bottom: .8em;
+    display: inline-block;
+    color: blue;
+    border-bottom: 3px solid blueviolet;
+    
+}
+
+/* .table-data .txt h2:nth-last-child(4){
+    color: rgb(71, 71, 120);
+} */
+.table-data .txt h3{
+    margin-top: .5em;
+    font-size: 1em;
+    color: purple
+}
+.table-data .txt p{
+    line-height: 1.2em;
+    font-size: 1.2em; 
+}
+.table-data .txt ul{
+    margin-top: 4em;
+}
+.table-data .txt li{
+    margin-top: 0.5em;
+}
+.table-data .txt li:nth-last-child(2){
+    margin-top: 1em;
+}
+
+/* .table-data .txt .pic{
+    position: absolute;
+    right: 0;
+    bottom: -1.5em; 
+} */
+
+.track{
+    margin-left: .5em;
+    margin-bottom: -2.6em;
+}
+.ml-1-5{
+    margin-left: 1.5em;
+}
+a:visited , a{
+    color: blue ;
 }

@@ -17,11 +17,19 @@ allSideMenu.forEach(item=> {
 // TOGGLE SIDEBAR
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
 const sidebar = document.getElementById('sidebar');
+const track = document.querySelector('.track');
+
 
 menuBar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
+	track.classList.toggle('ml-1-5');
 })
 
+
+if (window.innerWidth > 1200) {
+	sidebar.classList.remove('hide');
+	track.classList.add('ml-1-5');
+}
 
 
 
