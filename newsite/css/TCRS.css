@@ -154,7 +154,7 @@
     margin-bottom: .8em;
     display: inline-block;
     color: blue;
-   
+    /* border-bottom: 3px solid; */
     
 }
 
@@ -168,7 +168,8 @@
 }
 .table-data .txt p{
     line-height: 1.2em;
-    font-size: 1.2em; 
+    font-size: 1.2em;
+    font-weight: 400; 
 }
 .table-data .txt ul{
     margin-top: 4em;
@@ -194,5 +195,12 @@
     margin-left: 1.5em;
 }
 a:visited , a{
-    color: blue ;
+    color: blueviolet ;
+}
+.box-info a , .box-info a:visited{
+    color: black;
+}
+
+#content main #chart .todo {
+    flex-basis: 500px;
 }
