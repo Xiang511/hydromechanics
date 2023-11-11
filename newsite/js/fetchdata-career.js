@@ -34,11 +34,13 @@ function bestdaylong_inq(orderID) {
             html += '<th>Rank</th>';
             html += '<th>IGN</th>';
             html += '<th>勝率</th>';
+            html += '<th>天梯排名</th>';
             html += '<th>對戰次數</th>';
             html += '<th>三冠次數</th>';
             html += '<th>捐獻次數</th>';
             // html += '<th>經驗</th>';
             html += '<th>聯賽對戰次數</th>';
+
             html += '</tr>';
             html += '</thead>';
             html += '<tbody>';

@@ -27,8 +27,8 @@ menuBar.addEventListener('click', function () {
 
 
 if (window.innerWidth > 1200) {
-	sidebar.classList.remove('hide');
-	track.classList.add('ml-1-5');
+	// sidebar.classList.remove('hide');
+	// track.classList.add('ml-1-5');
 }
 
 
