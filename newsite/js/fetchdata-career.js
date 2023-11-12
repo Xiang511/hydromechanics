@@ -61,7 +61,7 @@ function bestdaylong_inq(orderID) {
                 alert('查無資料');
         }
         let table = new DataTable('#myTable', {
-            order: [[2, 'dsc']],
+            order: [[2, 'asc']],
             info: false,
             // paging: false
             processing: true,
