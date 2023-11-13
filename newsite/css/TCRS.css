@@ -26,8 +26,7 @@
     justify-content: center;
     align-items: center;
 }
-#result{
-}   
+  
 #sidebar .brand .fa {
 	min-width: 60px;
 	display: flex;
@@ -54,111 +53,7 @@
 #myTable th{
     font-size: 0.7em;
 }
-@media screen and (min-width:1301px){
-    #content #introduce{
-        flex-grow: 0;
-        flex-basis: 660px;
-    }
-    .Websitefeatures{
-        display: block;
-    }
-}
-@media screen and (max-width:1300px){
-   
-    #myTable{
-        font-size: 0.8em !important;
-    }
-    .Websitefeatures{
-        display: none;
-    }
-   
-}
 
-@media screen and (max-width:992px){
-   
-    #myTable{
-        font-size: 0.7em !important;
-    }
-    #sidebar.hide {
-        position: absolute;
-        width: 60px;
-        left: -5em;
-    }
-    #sidebar.hide ~ #content {
-        width: 100%;
-        left: 0px;
-    }
-    #content nav::before {
-        border-radius: 0; 
-    }
-    #myTable th{
-        font-size: .7em;
-    }
-   
-    
-   
-}
-
-@media screen and (max-width:768px){
-    #myTable_length{
-        /* visibility: hidden; */
-        display: none;
-    }
-    .table-data .txt h2{
-       font-size: 1.2em;
-    }
-    .table-data .order .txt p{
-        font-size:0.8em; 
-    }
-    .table-data .order .txt li{
-        margin-top: 0.5em;
-        font-size: 0.7em;
-    }
-    .table-data .order .txt p{
-        line-height: 1.5em;
-    }
-    .Websitefeatures{
-        display: block;
-    }
-}
-
-@media screen and (max-width:640px){
-    #myTable_filter{
-        text-align: left;
-    }
-    /* .table-data .txt .pic img{
-        width: 7em;
-        height: 6em;   
-    } */
-}
-
-@media screen and (max-width:576px){
-    #myTable_paginate .paginate_button{
-        /* padding: 0.2em 0.4em; */
-        padding: 0;
-        background: none;
-        border: none;
-    }
-    #myTable_paginate .paginate_button{
-       padding: 0.1em;
-    }
-    /* .table-data .txt .pic img{
-        width: 5em;
-        height: 4em;   
-    } */
-}
-@media screen and (max-width:400px){
-    /* .table-data .txt .pic img{
-        display: none;
-    } */
-}
-
-@media screen and (min-width:768px){
-    /* .table-data .txt .pic img{
-        width: 7em;
-        height: 6.2em;   
-    }  */
-}
 
 #sidebar .side-menu .undone {
 	opacity: 0.2;
@@ -174,14 +69,21 @@
 .todo-list .completed a:visited , .not-completed a{
     color: blue;
 }
-.table-data h1{
- 
-}
+
 .table-data .txt{
     position: relative;
 }
 .table-data .txt h2{
-    margin-top: 1.8em;
+    margin-top: 1.4em;
+    padding-bottom: .2em;
+    margin-bottom: .8em;
+    display: inline-block;
+    color: blue;
+    
+    
+}
+.table-data .txt h2:nth-child(n+2){
+    margin-top: 1.7em;
     padding-bottom: .2em;
     margin-bottom: .8em;
     display: inline-block;
@@ -236,3 +138,153 @@ a:visited , a{
 #content #chart.todo {
     flex-basis: 500px !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1401px){
+    /* #content #introduce{
+        flex-grow: 1;
+        flex-basis: 660px;
+    } */
+    /* .Websitefeatures{
+        display: block;
+    } */
+    .table-data .txt h2{
+        font-size: 1.9em;
+     }
+     .table-data .order .txt p{
+        font-weight: 500; 
+        font-size:1.3em; 
+     }
+     .table-data .order .txt li{
+         margin-top: 1em;
+         font-size: 1em;
+     }
+     .table-data .order .txt p{
+         line-height: 1.2em;
+     }
+     /* .search{
+        margin-left: 1em;
+     } */
+     .table-data .introduce{
+        margin-left: 1em;
+     }
+}
+
+/* @media screen and (min-width:1301px){
+    
+    .table-data .txt h2{
+        font-size: 1.9em;
+     }
+     .table-data .order .txt p{
+         font-size:1.3em; 
+     }
+     .table-data .order .txt li{
+         margin-top: 1em;
+         font-size: 1em;
+     }
+     .table-data .order .txt p{
+         line-height: 1.2em;
+     }
+    
+     .table-data .introduce{
+        margin-left: 1em;
+     }
+} */
+@media screen and (max-width:1300px){
+   
+    #myTable{
+        font-size: 0.8em !important;
+    }
+    .Websitefeatures{
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width:992px){
+   
+    #myTable{
+        font-size: 0.7em !important;
+    }
+  
+    #myTable th{
+        font-size: .7em;
+    }
+   
+    
+   
+}
+
+@media screen and (max-width:768px){
+    #myTable_length{
+        /* visibility: hidden; */
+        display: none;
+    }
+    .table-data .txt h2{
+       font-size: 1.2em;
+    }
+    .table-data .order .txt p{
+        font-size:0.8em; 
+    }
+    .table-data .order .txt li{
+        margin-top: 0.5em;
+        font-size: 0.7em;
+    }
+    .table-data .order .txt p{
+        line-height: 1.5em;
+    }
+    /* .Websitefeatures{
+        display: block;
+    } */
+    #sidebar.hide {
+        position: absolute;
+        width: 60px;
+        left: -5em;
+    }
+    #sidebar.hide ~ #content {
+        width: 100%;
+        left: 0px;
+    }
+    #content nav::before {
+        border-radius: 0; 
+    }
+}
+
+@media screen and (max-width:640px){
+    #myTable_filter{
+        text-align: left;
+    }
+    /* .table-data .txt .pic img{
+        width: 7em;
+        height: 6em;   
+    } */
+}
+
+@media screen and (max-width:576px){
+    #myTable_paginate .paginate_button{
+        /* padding: 0.2em 0.4em; */
+        padding: 0;
+        background: none;
+        border: none;
+    }
+    #myTable_paginate .paginate_button{
+       padding: 0.1em;
+    }
+    /* .table-data .txt .pic img{
+        width: 5em;
+        height: 4em;   
+    } */
+}
+
+

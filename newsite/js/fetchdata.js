@@ -1,8 +1,19 @@
 
+
+
 window.onload = function () {
     // 您的 function 程式碼
     bestdaylong_inq(orderID);
+
 };
+
+load =document.getElementById("load")
+window.setTimeout(loading,3000);
+
+function loading(){
+    document.getElementById("load").style.display = "none";
+        //3秒後影藏物件
+}
 
 var dateReviver = function (key, value) {
     var a;
@@ -27,7 +38,7 @@ function bestdaylong_inq(orderID) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var result = xmlhttp.responseText;
             var obj = JSON.parse(result, dateReviver);//解析json字串為json物件形式
-
+            
             var html = '<table id="myTable" class="cell-border hover">';
             html += '<thead>';
             html += '<tr>';

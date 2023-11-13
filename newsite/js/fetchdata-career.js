@@ -4,6 +4,14 @@ window.onload = function () {
     bestdaylong_inq(orderID);
 };
 
+load =document.getElementById("load")
+window.setTimeout(loading,4500);
+
+function loading(){
+    document.getElementById("load").style.display = "none";
+        //3秒後影藏物件
+}
+
 var dateReviver = function (key, value) {
     var a;
     if (typeof value === 'string') {

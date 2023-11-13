@@ -434,6 +434,14 @@ body {
 	background: var(--light);
 	padding: 24px;
 	overflow-x: auto;
+	/* overflow-x: hidden; */
+}
+#content main .table-data > .undonepic {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	/* overflow-x: auto; */
+	overflow-x: hidden;
 }
 #content main .table-data .head {
 	display: flex;
@@ -454,7 +462,23 @@ body {
 	flex-grow: 1;
 	flex-basis: 500px;
 }
-/* #content main .table-data .order table {
+
+.table-data h5{
+	margin-top: 2em;	
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+#content main .table-data .order table {
 	width: 100%;
 	border-collapse: collapse;
 }
@@ -497,7 +521,12 @@ body {
 }
 #content main .table-data .order table tr td .status.pending {
 	background: var(--orange);
-} */
+}
+ */
+
+
+
+
 
 
 #content main .table-data .todo {

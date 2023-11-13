@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>台灣皇室排名系統</title>
 
-	<link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" /> <link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
+	<link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" />
+	<link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
 
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- icon -->
-	
+
 	<link rel="stylesheet" href="css/TCRSoriginal.css">
 	<link rel="stylesheet" href="css/TCRS.css">
 
 
 
 	<!-- jQUERY -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<!-- jQUERY -->
 
 	<!-- datatables -->
 	<!-- main -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
-  
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 	<!-- main -->
 
 	<!-- fixed col -->
@@ -36,7 +40,7 @@
 
 	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
 	<!-- fixed col -->
-	
+
 	<!-- 表格拖拉 -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
 
@@ -45,8 +49,9 @@
 	<!-- datatables -->
 
 	<script src="js/fetchdata-career.js"></script>
-	
+
 </head>
+
 <body>
 
 	<a href="https://SiteStates.com" title="站長工具" style="display: none;">
@@ -54,19 +59,19 @@
 	</a>
 	<!-- SIDEBAR -->
 	<section id="sidebar" class="hide">
-		<a href="TCRS.html" class="brand">	
+		<a href="TCRS.html" class="brand">
 			<!-- <i class='bx bxs-smile'></i> -->
 			<i class='fa fa-bar-chart'></i>
 			<span class="text">TCRS</span>
 		</a>
 		<ul class="side-menu top">
-			<li >
+			<li>
 				<a href="TCRS.html">
 					<i class='bx bxs-home'></i>
 					<span class="text">首頁</span>
 				</a>
 			</li>
-			<li >
+			<li>
 				<a href="AboutUs.html">
 					<i class='bx bxs-detail'></i>
 					<span class="text">關於我們</span>
@@ -74,7 +79,7 @@
 			</li>
 			<li>
 				<a href="LadderRanking.html">
-					<i class='bx bxs-dashboard' ></i>
+					<i class='bx bxs-dashboard'></i>
 					<span class="text">天梯紀錄</span>
 				</a>
 			</li>
@@ -104,17 +109,17 @@
 			</li> -->
 			<li class="">
 				<a href="DataVisualization.html">
-					<i class='bx bxs-bar-chart-alt-2' ></i>
+					<i class='bx bxs-bar-chart-alt-2'></i>
 					<span class="text">統計圖表</span>
 				</a>
 			</li>
 			<li class="undone">
 				<a href="#">
-					<i class='bx bxs-group' ></i>
+					<i class='bx bxs-group'></i>
 					<span class="text">個人資料(尚未完成)</span>
 				</a>
 			</li>
-			
+
 		</ul>
 		<ul class="side-menu">
 			<!-- <li>
@@ -144,7 +149,7 @@
 	<section id="content">
 		<!-- NAVBAR -->
 		<nav>
-			<i class='bx bx-menu' ></i>
+			<i class='bx bx-menu'></i>
 			<!-- <a href="#" class="nav-link">Categories</a> -->
 			<form action="#">
 				<!-- <div class="form-input">
@@ -154,7 +159,7 @@
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
 			<!-- <label for="switch-mode" class="switch-mode"></label> -->
-				<!-- <a href="#" class="notification">
+			<!-- <a href="#" class="notification">
 					<i class='bx bxs-bell' ></i>
 					<span class="num"></span>
 				</a> -->
@@ -173,7 +178,7 @@
 						<li>
 							<a href="#">其他資料</a>
 						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
+						<li><i class='bx bx-chevron-right'></i></li>
 						<li>
 							<a class="active" href="#">版本紀錄</a>
 						</li>
@@ -186,27 +191,52 @@
 			</div>
 			<ul class="box-info">
 				<li>
-					<i class='bx bx-info-square' ></i>
+					<i class='bx bx-info-square'></i>
 					<span class="text">
-						<h3>1.2</h3>
+						<h3 id="version"></h3>
 						<p>目前版本</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
+					<i class='bx bxs-calendar-check'></i>
 					<span class="text">
-						<h3>12/4</h3>
+						<h3 id="updated"></h3>
 						<p>下次更新時間</p>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-group' ></i>
+					<i class='bx bxs-group'></i>
 					<span class="text">
-						<h3>1120</h3>
+						<h3 id="RecordNum"></h3>
 						<p>紀錄人數</p>
+						<script>
+							var xhr = new XMLHttpRequest();
+							xhr.open('get', 'data.json', true);
+							xhr.send();
+
+							xhr.onload = function () {
+								const data = JSON.parse(this.responseText);
+								// 版本
+								version = data.version
+								document.getElementById("version").innerHTML = version;
+
+								//更新時間
+								updated = data.Updated
+								document.getElementById("updated").innerHTML = updated;
+
+								// 紀錄人數
+								Record = data.RecordNumber
+								document.getElementById("RecordNum").innerHTML = Record;
+
+
+							}
+							xhr.onerror = function (err) {
+								console.log('錯誤', err)
+							}
+						</script>
 					</span>
 				</li>
-				
+
 			</ul>
 			<div class="table-data">
 				<div class="order">
@@ -216,21 +246,12 @@
 								<h1>版本紀錄</h1>
 							</div>
 						</div>
-					<script src="https://giscus.app/client.js"
-							data-repo="Xiang511/hydromechanics"
-							data-repo-id="R_kgDOKPsV6w"
-							data-category="Announcements"
-							data-category-id="DIC_kwDOKPsV684Cas5-"
-							data-mapping="url"
-							data-strict="0"
-							data-reactions-enabled="0"
-							data-emit-metadata="0"
-							data-input-position="bottom"
-							data-theme="preferred_color_scheme"
-							data-lang="zh-TW"
-							crossorigin="anonymous"
-							async>
-					</script>
+						<script src="https://giscus.app/client.js" data-repo="Xiang511/hydromechanics"
+							data-repo-id="R_kgDOKPsV6w" data-category="Announcements"
+							data-category-id="DIC_kwDOKPsV684Cas5-" data-mapping="url" data-strict="0"
+							data-reactions-enabled="0" data-emit-metadata="0" data-input-position="bottom"
+							data-theme="preferred_color_scheme" data-lang="zh-TW" crossorigin="anonymous" async>
+							</script>
 					</section>
 				</div>
 				<div class="todo">
@@ -243,20 +264,20 @@
 						<li class="completed">
 							<p>
 								<small>部落戰各項資訊(? 如果你們需要的話</small>
-								
+
 							</p>
-							
+
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
 						<li class="completed">
 							<small>任選兩天日期，顯示出天梯杯數漲幅級距</small>
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
-                        <li class="completed">
+						<li class="completed">
 							<small>彙整各項資訊(台灣推薦皇室戰爭YouTuber、目前仍然活躍的Top1000台灣玩家..等)</small>
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
-                        <li class="completed">
+						<li class="completed">
 							<small>紀錄當季世界傳奇之路排名紀錄(世界前10000名的所有資料)</small>
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
@@ -281,12 +302,12 @@
 					</div>
 					<ul class="todo-list">
 						<li class="completed">
-								<address >
-									<p>
-										<a href="mailto:xiangtcrs@gmail.com">
+							<address>
+								<p>
+									<a href="mailto:xiangtcrs@gmail.com">
 										xiangtcrs@gmail.com</a>
-									</p>
-								</address>
+								</p>
+							</address>
 						</li>
 					</ul>
 				</div>
@@ -295,8 +316,9 @@
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-	
+
 
 	<script src="js/dashboard.js"></script>
 </body>
+
 </html>
