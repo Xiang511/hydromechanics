@@ -4,16 +4,16 @@
 window.onload = function () {
     // 您的 function 程式碼
     bestdaylong_inq(orderID);
+    load = document.getElementById("load")
+    window.setTimeout(loading, 3000);
 
+    function loading() {
+        document.getElementById("load").style.display = "none";
+        //3秒後影藏物件
+    }
 };
 
-load =document.getElementById("load")
-window.setTimeout(loading,3500);
 
-function loading(){
-    document.getElementById("load").style.display = "none";
-        //3秒後影藏物件
-}
 
 var dateReviver = function (key, value) {
     var a;
@@ -38,7 +38,7 @@ function bestdaylong_inq(orderID) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var result = xmlhttp.responseText;
             var obj = JSON.parse(result, dateReviver);//解析json字串為json物件形式
-            
+
             var html = '<table id="myTable" class="cell-border hover">';
             html += '<thead>';
             html += '<tr>';
@@ -75,18 +75,18 @@ function bestdaylong_inq(orderID) {
             // },
 
             columnDefs: [{ orderable: false, targets: 0 }
-                        // { "width": "25%", "targets": 0 },
-                        // { "width": "5   %", "targets": [1,2,3,4] }
-                    ]
-            
+                // { "width": "25%", "targets": 0 },
+                // { "width": "5   %", "targets": [1,2,3,4] }
+            ]
+
 
         });
         // 自動序列
-        table.on( 'order.dt search.dt', function () {
-            table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                cell.innerHTML = i+1;
-            } );
-        } ).draw();
+        table.on('order.dt search.dt', function () {
+            table.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
     }
     var url = "https://script.google.com/macros/s/AKfycbzM4OVff4x272rzhW-1cveCHBplSc7VJLm2m9sdQ6-Z_aIRxuEeWkmU1qhBkVZ5JoECkg/exec";
     xmlhttp.open("get", url + "?orderID=" + orderID, true);

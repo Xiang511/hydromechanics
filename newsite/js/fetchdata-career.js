@@ -2,15 +2,16 @@
 window.onload = function () {
     // 您的 function 程式碼
     bestdaylong_inq(orderID);
+    load = document.getElementById("load")
+    window.setTimeout(loading, 4000);
+
+    function loading() {
+        document.getElementById("load").style.display = "none";
+        //3秒後影藏物件
+    }
 };
 
-load =document.getElementById("load")
-window.setTimeout(loading,4500);
 
-function loading(){
-    document.getElementById("load").style.display = "none";
-        //3秒後影藏物件
-}
 
 var dateReviver = function (key, value) {
     var a;
@@ -80,18 +81,18 @@ function bestdaylong_inq(orderID) {
             // },
 
             columnDefs: [{ orderable: false, targets: 0 }
-                        // { "width": "25%", "targets": 0 },
-                        // { "width": "5   %", "targets": [1,2,3,4] }
-                    ]
-            
+                // { "width": "25%", "targets": 0 },
+                // { "width": "5   %", "targets": [1,2,3,4] }
+            ]
+
 
         });
         // 自動序列
-        table.on( 'order.dt search.dt', function () {
-            table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                cell.innerHTML = i+1;
-            } );
-        } ).draw();
+        table.on('order.dt search.dt', function () {
+            table.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
     }
     var url = "https://script.google.com/macros/s/AKfycbzErhtEAqr83yMm0DdHpkKdCtiiX2R6N6T6-xc7u59Yk6KG-zYLvbT4vomKxe68d1DHTw/exec";
     xmlhttp.open("get", url + "?orderID=" + orderID, true);
