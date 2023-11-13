@@ -8,7 +8,7 @@ window.onload = function () {
 };
 
 load =document.getElementById("load")
-window.setTimeout(loading,3000);
+window.setTimeout(loading,3500);
 
 function loading(){
     document.getElementById("load").style.display = "none";
