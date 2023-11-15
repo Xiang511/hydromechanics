@@ -30,7 +30,7 @@ var PlayerAnnouncement = document.getElementById("announcement")
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'http://xiang511.github.io/test/test.json', true);
+xhr.open('get', 'https://xiang511.github.io/test/test.json', true);
 xhr.send();
 
 xhr.onload = function () {
