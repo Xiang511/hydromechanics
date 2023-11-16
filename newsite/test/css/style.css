@@ -267,10 +267,10 @@ body {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.announcement .pic,
+/* .announcement .pic,
 .announcement .pic {
-    max-width: 160px;
-}
+    max-width: 180px;
+} */
 
 .content {
     padding: 10px 20px 20px 20px;
@@ -442,6 +442,33 @@ body {
         margin-bottom: 0;
         flex-grow: 1;
     }
+    /* =============================== */
+    .sticky {
+        margin-left: 2.5em;
+    }
+
+    .careerdata h2{
+        margin-top: 1.2em;
+    }
+    
+    .data .xxl{
+        margin-top: 0.5em;
+        display: flex; 
+        box-shadow: none;
+        justify-content:space-around;
+    }
+    .data .xxl-2{
+        margin-top: 1em;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .data .xxl-3{  
+        display: flex; 
+        flex-direction: column;
+        box-shadow: none;
+        justify-content:flex-start;
+    }
+    
 
 }
 
@@ -460,52 +487,14 @@ body {
         align-items: start;
     }
 
-    .sticky {
-        margin-left: 2.5em;
-    }
 
     .contact {
         position: relative;
         bottom: -52%;
         margin-left: .6em;
     }
-    .careerdata h2{
-        margin-top: 1.2em;
-    }
-    /* .rating,
-    .lastSeason {
-        display: flex;
 
-    } */
-    /* .FavouriteCard h2,
-    .rating h2,
-    .lastSeason h2 {
-        margin-left: 1.5em;
-    }
-    .FavouriteCard span p{
-        margin-left: 1.9    em;
-    } */
-    /* .lastSeason h2{
-        margin-right: 2em;
-    } */
-    .data .xxl{
-        margin-top: 0.5em;
-        display: flex; 
-        box-shadow: none;
-        justify-content:space-around;
-    }
-    .data .xxl-2{
-        margin-top: 1em;
-        display: flex; 
-        justify-content: space-around;
-    }
-    .data .xxl-3{  
-        display: flex; 
-        flex-direction: column;
-        box-shadow: none;
-        justify-content:flex-start;
-    }
-
+    
     
     
 

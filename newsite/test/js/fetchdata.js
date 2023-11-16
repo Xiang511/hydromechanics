@@ -26,11 +26,11 @@ var PlayermessageSec = document.getElementById("messageSec")
 var PlayerAnnouncement = document.getElementById("announcement")
 
 
-
+// https://xiang511.github.io/test/test.json
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://xiang511.github.io/test/test.json', true);
+xhr.open('get', 'test.json', true);
 xhr.send();
 
 xhr.onload = function () {
