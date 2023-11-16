@@ -204,7 +204,8 @@ body {
     padding: 10px;
 
 }
-.aboutme h2{
+
+.aboutme h2 {
     margin-top: .8em;
 }
 
@@ -254,30 +255,38 @@ body {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     padding: 20px;
 }
+
 .sitestatesJs {
-   display: none;
+    display: none;
 }
+
 /* .comment{
     display: none;
 } */
-.announcement{
+.announcement {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
-.announcement .pic, .announcement .pic{
+
+.announcement .pic,
+.announcement .pic {
     max-width: 160px;
 }
-.content{
-    padding:  10px  20px 20px 20px;  
+
+.content {
+    padding: 10px 20px 20px 20px;
 }
-.announcement .item .txt{
+
+.announcement .item .txt {
     margin-left: 6px;
 }
-.announcement .item .pic img{
-    vertical-align: sub; 
-    margin-left: 8px; 
-    
+
+.announcement .item .pic img {
+    vertical-align: sub;
+    margin-left: 8px;
+
 }
-#messageSec{
+
+#messageSec {
     margin-top: 1.2em;
 }
 
@@ -288,12 +297,13 @@ body {
         display: block;
 
     }
-    .gicus-comment{
+
+    .gicus-comment {
         margin-top: 1.3em;
         padding: 8px;
     }
-        
-    
+
+
 }
 
 @media screen and (min-width:992px) {
@@ -308,11 +318,13 @@ body {
     }
 
     .data {
+        display: flex;
+        flex-direction: column;
         flex-grow: 1;
         width: 60%;
     }
 
-    .data div {
+    .data > div {
         margin-bottom: .7em;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         padding-left: 2.4em;
@@ -341,9 +353,10 @@ body {
         display: flex;
         flex-direction: column;
     }
-    .information-shadow .sticky{
-        position:sticky;
-        top: 80px;   
+
+    .information-shadow .sticky {
+        position: sticky;
+        top: 80px;
     }
 
     .layout {
@@ -357,10 +370,12 @@ body {
 
     .aboutme {
         padding: 2px;
+        margin-left: .8em;
     }
+
     .comment {
         width: 38%;
-        display: block;  
+        display: block;
         padding-top: 12px;
         display: flex;
         flex-direction: column;
@@ -372,49 +387,135 @@ body {
     .sitestatesJs {
         display: block;
         padding: 3px;
-   }
-   .contact{
-    margin-top: 4.5em;
-    position:sticky;
-    margin-left: .6em;
-           
     }
-    .announcement{
+
+    .contact {
+        margin-top: 4.5em;
+        position: sticky;
+        margin-left: .6em;
+
+    }
+
+    .announcement {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         padding: 10px;
         margin-top: -0.8em;
     }
-    .announcement .item{
+
+    .announcement .item {
         display: flex;
     }
-    .announcement .item .pic{
+
+    .announcement .item .pic {
         width: 20px;
-        height: 20px; 
-        
-        
+        height: 20px;
+
+
     }
-    .announcement .item .txt{
+
+    .announcement .item .txt {
         margin-left: 6px;
     }
-    .announcement .item .pic img{
-        vertical-align: sub; 
-        margin-left: 0; 
-        
+
+    .announcement .item .pic img {
+        vertical-align: sub;
+        margin-left: 0;
+
     }
-    #announcement{
+
+    #announcement {
         line-height: 1.6em;
     }
-    .gicus-comment{
+
+    .gicus-comment {
         margin-top: 0.8em;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         padding: 12px;
         flex-grow: 1;
     }
-    .content{
-        padding: 10px;  
+
+    .content {
+        padding: 10px;
     }
-    .layout .careerdata{
+
+    .layout .careerdata {
         margin-bottom: 0;
+        flex-grow: 1;
     }
+
+}
+
+@media screen and (min-width:1300px) {
+
+    .information .item .information-pic {
+        width: 30%;
+
+    }
+
+    .information-txt {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+
+    .sticky {
+        margin-left: 2.5em;
+    }
+
+    .contact {
+        position: relative;
+        bottom: -66.5%;
+        margin-left: .6em;
+    }
+    .careerdata h2{
+        margin-top: 1.2em;
+    }
+    /* .rating,
+    .lastSeason {
+        display: flex;
+
+    } */
+    /* .FavouriteCard h2,
+    .rating h2,
+    .lastSeason h2 {
+        margin-left: 1.5em;
+    }
+    .FavouriteCard span p{
+        margin-left: 1.9    em;
+    } */
+    /* .lastSeason h2{
+        margin-right: 2em;
+    } */
+    .data .xxl{
+        margin-top: 0.5em;
+        display: flex; 
+        box-shadow: none;
+        justify-content:space-around;
+    }
+    .data .xxl-2{
+        margin-top: 1em;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .data .xxl-3{  
+        display: flex; 
+        flex-direction: column;
+        box-shadow: none;
+        justify-content:flex-start;
+    }
+
     
+    
+
+
+
+
+
+
+
+
+
+
 }
