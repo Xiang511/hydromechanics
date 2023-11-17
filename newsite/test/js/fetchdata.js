@@ -104,7 +104,7 @@ xhr.onload = function () {
     console.log(name);
     console.log(wins);
 
-    PlayerTag.innerHTML += tag;
+    // PlayerTag.innerHTML += tag;
     PlayerName.innerHTML += name;
     PlayerClan.innerHTML += clan;
     // PlayerClanTag.innerHTML += clantag;

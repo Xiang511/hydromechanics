@@ -213,6 +213,7 @@ body {
     margin-bottom: 0.5em;
 }
 
+
 .FavouriteCard {
     width: 100%;
     margin: auto;
@@ -302,8 +303,40 @@ body {
         margin-top: 1.3em;
         padding: 8px;
     }
+    .name{
+        font-size: 2em;
+    }
+    .clan{
+        font-size: 1.3em;
+    }
+    .aboutme #aboutus{
+        font-size: 1.4em;
+        font-weight: 500;
+    }
 
-
+}
+@media screen and (min-width:592px){
+    .data .xxl{
+        margin-top: 0.5em;
+        display: flex; 
+        box-shadow: none;
+        justify-content:space-around;
+    }
+    .data .xxl-2{
+        margin-top: 1em;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .data .xxl-3{  
+        display: flex; 
+        flex-direction: column;
+        box-shadow: none;
+        justify-content:flex-start;
+    }
+    .aboutme #aboutus{
+        font-size: 1.2em;
+        font-weight: 500;
+    }
 }
 
 @media screen and (min-width:992px) {
@@ -468,6 +501,12 @@ body {
         box-shadow: none;
         justify-content:flex-start;
     }
+    .name{
+        font-size: 1em;
+    }
+    .clan{
+        font-size: .8em;
+    }
     
 
 }
@@ -489,12 +528,17 @@ body {
 
 
     .contact {
-        position: relative;
-        bottom: -52%;
+        position: fixed;
+        bottom: 10%;
         margin-left: .6em;
     }
 
-    
+    .name{
+        font-size: 1.5em;
+    }
+    .clan{
+        font-size: 1em;
+    }
     
     
 
