@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣皇室排名系統</title>
+    <link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- icon -->
+
+    <!-- jQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQUERY -->
+
+
+</head>
+
+<body>
+    <input type="checkbox" id="menu-switch">
+    <header class="main-header">
+        <div class="logo">
+            <a href="#" class="brand">
+                <img src="img/grid-svgrepo-com.svg"
+                    style="width: 30px;height: 30px;vertical-align: sub; margin-right: .5em;margin-left: 1em;"
+                    alt="">TCRS</a>
+        </div>
+
+        <label for="menu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="main-nav">
+            <a href="#">首頁</a>
+            <a href="#">個人資料</a>
+
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="information">
+            <div class="items">
+                <div class="information-shadow">
+                    <div class="sticky">
+                        <div class="item">
+                            <div class="information-pic">
+                                <img id="picture" src="img//unknow.png">
+                            </div>
+                            <div class="grow"></div>
+                            <div class="information-txt">
+                                <p class="name"></p>
+                                <!-- <p class="tag"></p> -->                              
+                                <p class="clan"></p>
+                            </div>
+                        </div>
+                        <!-- <div class="aboutme">
+                            
+                            <span class="message" id="aboutus">
+
+                                </span>
+                        </div>
+                        <div class="aboutme">
+                            
+                            <span class="message" id="message"></span>
+                            <span class="message" id="messageSec"></span>
+                            
+                        </div> -->
+
+                        <div class="contact">
+
+                            <script src="https://SiteStates.com/show/js_text/49bcb5c0fd457f7a07d5fba4e343a5bf"
+                                type="text/javascript"></script>
+
+                            <span class="sitestatesJs"></span>
+                            <span class="sitestatesJs"></span>
+                            <span class="sitestatesJs"></span>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="grow"></div>
+                <div class="layout">
+
+                    <div class="data">
+                        <!-- <div class="grow"></div> -->
+                        <div class="FavouriteCard">
+                            <h2>FavouriteCard</h2>
+                            <span class="message">
+                                <p class="currentFavouriteCard"></p>
+                        </div>
+                        <div class="lastSeason">
+                            <h2>上一賽季</h2>
+                            <div class="xxl">
+                                <p class="lastPathOfLegendSeasonResultRank">排名:</p>
+                                <div style="box-shadow: none;" class="grow"></div>
+                                <p class="lastPathOfLegendSeasonResultTrophies">評分:</p>
+                                <div style="box-shadow: none;" class="grow"></div>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <h2>天梯歷史數據</h2>
+                            <div class="xxl">
+                                <p class="leagueStatistics">改版前排名:</p>
+                                <div style="box-shadow: none;" class="grow"></div>
+                                <p class="bestPathOfLegendSeasonResult">天梯評分排名:</p>
+                                <div style="box-shadow: none;" class="grow"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="careerdata">
+                            <h2>生涯數據</h2>
+                            <div class="xxl-2">
+                                <div class="xxl-3">
+                                    <p class="wins">勝場數:</p>
+                                    <p class="losses">敗場數:</p>
+                                    <p class="battleCount">對戰次數:</p>
+                                </div>
+                                <div class="grow"></div>
+                                <div class="xxl-3">
+                                    <p class="threeCrownWins">三冠次數:</p>
+                                    <p class="tournamentBattleCount">聯賽對戰次數:</p>
+                                    <p class="totalDonations">總捐獻次數:</p>
+                                </div>
+                                <div class="grow"></div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="grow"></div>
+
+                    <div class="comment">
+                        <div class="announcement">
+                            <div class="item">
+                                <div class="pic">
+                                    <img style="width: 25px;height: 25px;margin-right:.2em;" src="img/announcement-svgrepo-com.svg"
+                                        alt="">
+                                </div>
+                                <div class="txt">
+                                    <h3>Announcement</h3>
+                                </div>
+                            </div>
+                            <div class="content" >
+                                <p id="announcement"></p>
+                            </div>
+                        </div>
+                        <div class="gicus-comment">
+                            <script src="https://giscus.app/client.js" data-repo="Xiang511/hydromechanics"
+                                data-repo-id="R_kgDOKPsV6w" data-mapping="number" data-term="10"
+                                data-reactions-enabled="0" data-emit-metadata="0" data-input-position="bottom"
+                                data-theme="light" data-lang="zh-TW" crossorigin="anonymous" async>
+                                </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/fetchdata.js"></script>
+</body>
+
+</html>
