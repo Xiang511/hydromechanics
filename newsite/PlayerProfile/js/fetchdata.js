@@ -70,7 +70,7 @@ xhr.onerror = function (err) {
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', '22R920J00.json', true);
+xhr.open('get', 'json/22R920J00.json', true);
 xhr.send();
 
 xhr.onload = function () {
