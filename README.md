@@ -1,9 +1,5 @@
 ## Taiwan Clash Royale Ranking System - TCRS
-你有沒有曾想過自己天梯成績在台灣的排名？</br>
-你是否想與其他玩家比較天梯的實力？</br>
-TCRS 可以幫助你做到這一點</br>
-系統會記錄玩家排名，並顯示在網站上。</br>
-你可以隨時查看自己的積分和排名，並與其他玩家競爭。
+[![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)![jQuery Badge](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=fff&style=for-the-badge)](https://forthebadge.com/images/badges/uses-html.svg)
 
 ## 和Royale API 有甚麼不同
 - Royale API無法做到 統計臺灣地區所有人的歷史排名並比較
@@ -17,19 +13,6 @@ TCRS 可以幫助你做到這一點</br>
 - 天梯紀錄統計圖表
 - 生涯紀錄統計圖表
 
-## 未來規劃
-- 部落戰各項資訊
-- 任選兩天日期，顯示出天梯杯數漲幅級距(The idea comes from ang★ᴍᴇᴛᴀᴛʀᴏɴ⚡)
-- 彙整各項資訊(台灣推薦皇室戰爭YouTuber、目前仍然活躍的Top1000台灣玩家..等)
-- 紀錄當季世界傳奇之路排名紀錄(世界前10000名的所有資料)=>官方api沒有這個，可能要花點時間想一下
-
 ## 加入我們
-只需填寫IGN,tag 即可加入我們 !
-立即了解更多資訊，填寫表單！
-https://forms.gle/ta7fTenyMpBHkRAHA
-
-## QA
-有甚麼想法或其他建議可以在留言區留言告訴我</br>
-
-
-
+只需填寫IGN,tag 即可加入我們 !<br>
+立即了解更多資訊，填寫<a href="https://forms.gle/ta7fTenyMpBHkRAHA">表單</a>!
