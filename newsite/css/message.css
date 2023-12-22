@@ -73,7 +73,20 @@
     flex-grow: 1;
     overflow-y: scroll;
 }
-
+#unload{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 1.2em;
+    letter-spacing: .2em;
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 0.375rem;
+    text-align: center;
+}
 .form{
     position: fixed;
     bottom:-1.3em;
@@ -112,7 +125,7 @@
     color: #000;    
 }
 .txt-items a:hover{
-    scale: 1.4;
+    scale: 1.1;
 }
 .txt-items img{
     width: 1.5em;
@@ -122,8 +135,8 @@
     vertical-align: sub;
 }
 .txt-items span{
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 600;
 }
 .txt-items p{
     padding-right: 10px;
@@ -167,7 +180,11 @@ textarea{
 #myTable_info{
     display: none;
 }
-
+@media screen and (max-width:768px){
+    .data{
+        height: 55vh;
+    }
+}
 
 
 @media screen and (min-width:768px){
@@ -179,23 +196,35 @@ textarea{
         margin-top: 0.5em;
         width: 49%;
     }
+    #unload{
+        text-align: center;
+        width: 80%;
+    }
     .txt-items span{
-        font-size: 2em;
-        font-weight: 700;
+        font-size: 1.5em;
+        font-weight: 500;
     }
     .txt-items img{
         width: 2em;
         height: 2em;
     }
     .txt-items{
-        width: 40%;
+        width: 30%;
     }
+    .input-item{
+        width: 70%;
+    }
+   
 }
 @media screen and (min-width:1560px){
     .data{
         width: 100%;
     }
     .txt-items{
-        width: 35%;
+        width: 30%;
+    }
+    #unload{
+        text-align: center;
+        width: 100%;
     }
 }
