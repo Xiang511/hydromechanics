@@ -20,3 +20,6 @@ TCRS 可以幫助你做到這一點<br>
 ## 加入我們
 只需填寫IGN,tag 即可加入我們 !<br>
 立即了解更多資訊，填寫<a href="https://forms.gle/ta7fTenyMpBHkRAHA">表單</a>!
+
+## 聯絡我們
+E-mail: xiangtcrs@gmail.com
