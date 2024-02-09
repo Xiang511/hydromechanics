@@ -24,39 +24,40 @@
 
 	<!-- datatables -->
 	<!-- main -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
-  
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <link href="DataTables/datatables.min.css" rel="stylesheet">
+ 
+	<script src="DataTables/datatables.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"> -->
 	<!-- main -->
 
 	<!-- fixed col -->
-	<link rel="stylesheet" href=https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
+	<!-- <link rel="stylesheet" href=https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
 
-	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script> -->
 	<!-- fixed col -->
 	
 	<!-- 表格拖拉 -->
-	<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
 
-	<script src="https://cdn.datatables.net/colreorder/1.7.0/js/dataTables.colReorder.min.js"></script>
+	<script src="https://cdn.datatables.net/colreorder/1.7.0/js/dataTables.colReorder.min.js"></script> -->
 	<!-- 表格拖拉 -->
 	<!-- datatables -->
 
+	<script src="js/fetchdata-Profile.js"></script>
 	
 </head>
 <body>
 
 	<!-- SIDEBAR -->
 	<section id="sidebar" class="hide">
-		<a href="#" class="brand">	
+		<a href="TCRS.html" class="brand">	
 			<!-- <i class='bx bxs-smile'></i> -->
 			<i class='fa fa-bar-chart'></i>
 			<span class="text">TCRS</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
+			<li >
 				<a href="TCRS.html">
 					<i class='bx bxs-home'></i>
 					<span class="text">首頁</span>
@@ -68,19 +69,20 @@
 					<span class="text">關於我們</span>
 				</a>
 			</li>
-			<li>
+			<li >
 				<a href="LadderRanking.html">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">天梯紀錄</span>
 				</a>
 			</li>
+			
 			<li>
 				<a href="PlayerCareerRecord.html">
 					<i class='bx bxs-grid-alt'></i>
 					<span class="text">生涯紀錄</span>
 				</a>
 			</li>
-			<li >
+			<li class="active">
 				<a href="Player-Profile.html">
 					<i class='bx bxs-crown'></i>
 					<span class="text">個人成就</span>
@@ -98,7 +100,6 @@
 					<span class="text">版本紀錄</span>
 				</a>
 			</li>
-			
 			<li>
 				<a  target="_blank" href="https://xiang511.com/CR-API/">
 					<i class='bx bx-code'></i>
@@ -124,7 +125,6 @@
 					<span class="text">流體力學</span>
 				</a>
 			</li>
-			
 			<!-- <li class="undone">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
@@ -134,16 +134,19 @@
 			
 		</ul>
 		<ul class="side-menu">
-			
-				<!-- <li>
-					<a href="https://www.google.com.tw/?hl=zh_TW" class="logout">
-						<i class='bx bxs-log-out-circle' ></i>
-						<span class="text">登出</span>
-					</a>
-				</li> -->
-			
+			<!-- <li>
+				<a href="https://SiteStates.com" title="站長工具">
+					<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
+				</a>
+			</li> -->
+			<!-- <li>
+				<a href="https://www.google.com.tw/?hl=zh_TW" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">登出</span>
+				</a>
+			</li> -->
 		</ul>
-		<div class="track">
+        <div class="track">
 			<a href="https://SiteStates.com" title="站長工具">
 				<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
 			</a>
@@ -184,11 +187,11 @@
 					<h1>台灣皇室排名系統</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">首頁</a>
+							<a href="#">生涯紀錄</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">儀表板</a>
+							<a class="active" href="#">個人成就</a>
 						</li>
 					</ul>
 				</div>
@@ -198,98 +201,73 @@
 				</a> -->
 			</div>
 
-			<ul class="box-info">
+			<!-- <ul class="box-info">
 				<li>
-					<a href="AboutUs.html"><i class='bx bxs-detail'></i></a>
+					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3><a href="AboutUs.html">關於我們</a></h3>
-						
-					</span>
-					
-				</li>
-				<li>
-					<a href="LadderRanking.html"><i class='bx bxs-dashboard' ></i></a>
-					<span class="text">
-						<h3><a href="LadderRanking.html">天梯紀錄</a></h3>
-						
+						<h3>12/4</h3>
+						<p>下次更新時間</p>
 					</span>
 				</li>
-				<li>
-					<a href="PlayerCareerRecord.html"><i class='bx bxs-grid-alt'></i></a>
-					<span class="text">
-						<h3><a href="PlayerCareerRecord.html">生涯紀錄</a></h3>
-						
-					</span>
-				</li>
-				<li>
-					<a href="DeveloperAnnouncement.html"><i class='bx bx-code-alt'></i></a>
-					<span class="text">
-						<h3><a href="DeveloperAnnouncement.html">版本紀錄</a></h3>
-					</span>
-				</li>
-				<!-- <li>
-					<i class='bx bxs-bar-chart-alt-2' ></i>
-					<span class="text">
-						<h3><a href="#">圖表</a></h3>
-					</span>
-				</li> -->
+			
 				
-				
-			</ul>
-			<div class="table-data ">
-				<div class="order  undonepic">
+			</ul> -->
+			
+
+
+			<div class="table-data">
+				<div class="order">
 					<section class="search" id="search">
-						<div class="head">
-							<h3>版面未完成 敬請期待!</h3>
-							<!-- <i class='bx bx-search' ></i>
-							<i class='bx bx-filter' ></i> -->
+						<div class="title">
+							<div class="center">
+								<h1>個人成就</h1>
+								<h5 id="load">載入中...</h5>
+							</div>
 						</div>
-						<img style="object-fit:cover;width: 100%;" src="img//undraw_add_information_j2wg.svg" alt="">
+						<div class="form">
+							<input id="atmNO" type="text" style="display: none;"><br />
+							<input type="text" id="orderID" placeholder=""value="all" disabled
+							style="display: none;"
+							onclick="document.getElementById('orderID').value=''"/>
+						</div>
+						<div class="result" id="result">
+						  <span id="order_status"></span>
+					  </div>
 					</section>
 				</div>
 				<div class="todo">
-					<!-- <div class="center">
-						<h1></h1>
-					</br>
-					</div> -->
 					<div class="head">
-						<h3>未來規劃</h3>
+						<h3>常見問題</h3>
 						<!-- <i class='bx bx-plus' ></i>
 						<i class='bx bx-filter' ></i> -->
 					</div>
 					<ul class="todo-list">
 						<li class="completed">
 							<p>
-								<small>部落戰各項資訊(? 如果你們需要的話</small>
+								<small>如果您的資訊沒有出現在上面的話，請遵照格式重新填寫
+									<a href="https://forms.gle/vuPKgqkamhDtog9v9">表單</a>
+								，並耐心等待</small>
 								
 							</p>
 							
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
-						<li class="completed">
-							<small>任選兩天日期，顯示出天梯杯數漲幅級距</small>
-							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
-						</li>
-                        <li class="completed">
-							<small>彙整各項資訊(台灣推薦皇室戰爭YouTuber、目前仍然活躍的Top1000台灣玩家..等)</small>
-							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
-						</li>
-                        <li class="completed">
-							<small>紀錄當季世界傳奇之路排名紀錄(世界前10000名的所有資料)</small>
+						<li class="not-completed">
+							<small>對網站有其他建議的話，歡迎填寫<a href="https://forms.gle/2xiZQuPcL1kpYKCr6">回饋表單</a>，幫助我們優化網站</small>
 							<!-- <i class='bx bx-dots-vertical-rounded' ></i> -->
 						</li>
 					</ul>
-					<div class="head Websitefeatures" style="margin-top: 1.4em;">
-						<h3 class="Websitefeatures"> 目前網站功能</h3>
+					<div class="head" style="margin-top: 1.4em;">
+						<h3>目前功能</h3>
 						<!-- <i class='bx bx-plus' ></i>
 						<i class='bx bx-filter' ></i> -->
 					</div>
-					<ul class="todo-list Websitefeatures">
-						<li class="not-completed">
-							<p>天梯歷史紀錄</p>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>搜尋資料</p>
 						</li>
 						<li class="not-completed">
-							<p>生涯紀錄</p>
+							<p>自動分頁</p>
 						</li>
 					</ul>
 					<div class="head" style="margin-top: 1.4em;">
@@ -308,12 +286,7 @@
 						</li>
 					</ul>
 				</div>
-				</div>
 			</div>
-		
-			
-			
-			
 		</main>
 		<!-- MAIN -->
 	</section>
