@@ -123,7 +123,7 @@
 } */
 
 .track{
-    margin-left: .5em;
+    margin-left: .3em;
     margin-bottom: -2.6em;
 }
 .ml-1-5{
@@ -207,9 +207,9 @@ a:visited , a{
     #myTable{
         font-size: 0.8em !important;
     }
-    .Websitefeatures{
+    /* .Websitefeatures{
         display: none;
-    }
+    } */
    
 }
 
