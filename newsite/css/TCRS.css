@@ -146,11 +146,11 @@ a:visited , a{
     border: none;
     border-radius: 0.375rem;
 }
-.gitmes .title{
+/* .gitmes .title{
     position: sticky;
     z-index: 1;
-    overflow: auto;
-}
+    overflow: auto; */
+/* } */
 
 
 
