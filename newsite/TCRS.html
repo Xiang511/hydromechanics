@@ -61,6 +61,9 @@
 		integrity="sha512-+IpCthlNahOuERYUSnKFjzjdKXIbJ/7Dd6xvUp+7bEw0Jp2dg6tluyxLs+zq9BMzZgrLv8886T4cBSqnKiVgUw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<!-- driver.js -->
+	<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
 </head>
 
 <body>
@@ -198,7 +201,7 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>台灣皇室排名系統</h1>
+					<h1 id="sys">台灣皇室排名系統</h1>
 					<ul class="breadcrumb">
 						<li>
 							<a href="#">首頁</a>
@@ -216,7 +219,7 @@
 			</div>
 
 			<ul class="box-info">
-				<li>
+				<li id="AboutUs">
 					<a href="AboutUs.html"><i class='bx bxs-detail'></i></a>
 					<span class="text">
 						<h3><a href="AboutUs.html">關於我們</a></h3>
@@ -224,21 +227,21 @@
 					</span>
 
 				</li>
-				<li>
+				<li id="LadderRanking">
 					<a href="LadderRanking.html"><i class='bx bxs-dashboard'></i></a>
 					<span class="text">
 						<h3><a href="LadderRanking.html">天梯紀錄</a></h3>
 
 					</span>
 				</li>
-				<li>
+				<li id="PlayerCareerRecord">
 					<a href="PlayerCareerRecord.html"><i class='bx bxs-grid-alt'></i></a>
 					<span class="text">
 						<h3><a href="PlayerCareerRecord.html">生涯紀錄</a></h3>
 
 					</span>
 				</li>
-				<li>
+				<li id="DeveloperAnnouncement">
 					<a href="DeveloperAnnouncement.html"><i class='bx bx-code-alt'></i></a>
 					<span class="text">
 						<h3><a href="DeveloperAnnouncement.html">版本紀錄</a></h3>
@@ -315,6 +318,7 @@
 
 	<script src="js/dashboard.js"></script>
 	<script src="js/dashboardC3.js"></script>
+	<script src="js/driver.js"></script>
 </body>
 
 </html>
