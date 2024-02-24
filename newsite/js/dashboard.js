@@ -13,17 +13,20 @@ allSideMenu.forEach(item=> {
 
 
 
+//driver.js:45行
+// // TOGGLE SIDEBAR
+// const menuBar = document.querySelector('#content nav .bx.bx-menu');
+// const sidebar = document.getElementById('sidebar');
+// const track = document.querySelector('.track');
+//
+// menuBar.addEventListener('click', function () {
+// 	sidebar.classList.toggle('hide');
+// 	track.classList.toggle('ml-1-5');
+// })
 
-// TOGGLE SIDEBAR
-const menuBar = document.querySelector('#content nav .bx.bx-menu');
-const sidebar = document.getElementById('sidebar');
-const track = document.querySelector('.track');
 
 
-menuBar.addEventListener('click', function () {
-	sidebar.classList.toggle('hide');
-	track.classList.toggle('ml-1-5');
-})
+
 
 
 // if (window.innerWidth > 1300) {
