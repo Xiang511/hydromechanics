@@ -1,7 +1,6 @@
 const driver = window.driver.js.driver;
 
 // const driverObj = driver();
-
 // driverObj.highlight({
 //   element: "#test",
 //   popover: {
@@ -9,7 +8,6 @@ const driver = window.driver.js.driver;
 //     description: "Description"
 //   }
 // });
-
 const driverObj = driver({
   showProgress: true,
   showButtons: ['next', 'previous', 'close'],
@@ -28,11 +26,8 @@ const driverObj = driver({
     { element: '.bx-menu', popover: { title: '側選單', description: '其他功能 例如:"個人成就","網站開源程式碼', side: "left", align: 'start' } },
     { element: '#chart', popover: { title: '目前網站瀏覽次數', description: '感謝你的貢獻!', side: "left", align: 'start' } },
 
-    { element: '#track', popover: { title: '介紹完畢', description: '盡情瀏覽網站內容把! 希望你們會喜歡!</br>我是Xiang 我們排行榜上見! ', side: "left", align: 'start' } },
-    
-
+    { element: '#sys', popover: { title: '介紹完畢', description: '盡情瀏覽網站內容把! 希望你們會喜歡!</br>我是Xiang 我們排行榜上見! ', side: "left", align: 'start' } },
   ],
-
   onDestroyStarted: () => {
     if (!driverObj.hasNextStep() || confirm("確定要跳過導覽?")) {
       driverObj.destroy();
@@ -49,5 +44,4 @@ const driverObj = driver({
     }
   },
 });
-// debug
 driverObj.drive();
