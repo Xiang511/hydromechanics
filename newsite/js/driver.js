@@ -41,20 +41,4 @@ const driverObj = driver({
 
 });
 // debug
-// driverObj.drive();
-
-var cookie = document.cookie;
-if (cookie.indexOf("first_visit=true") === -1) {
-    // 用戶是第一次造訪網頁
-    // 設定 Cookie
-    document.cookie = "first_visit=true";
-
-    // 執行第一次造訪網頁的程式碼
-    driverObj.drive();
-    
-} else {
-    // 用戶不是第一次造訪網頁
-    // const hostname = window.location.hostname;
-    // alert("welcome back ! "+ hostname)
-    // 執行非第一次造訪網頁的程式碼
-}
+driverObj.drive();
