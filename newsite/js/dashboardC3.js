@@ -14,8 +14,11 @@ const Arrresult = arr.reduce((a, b) => a + b);
 
 
 var chart = c3.generate({
+    size: {
+        height: 380,
+    },
     padding: {
-        top: 68,
+        top: 30,
         right: 50,
         bottom: 10,
         // left: 100,
