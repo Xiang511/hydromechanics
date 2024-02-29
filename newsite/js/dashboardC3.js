@@ -6,12 +6,13 @@ const result = text.substring(text.length - 4);
 // console.log(result)
 
 //即時計算當月人數
-const arr = [188, 571, 213, 132];
+const arr = [188, 571, 213, 132,518];
 const Arrresult = arr.reduce((a, b) => a + b);
 // console.log(Arrresult)
 
 
-
+//首先把數字PUSH到Arr裡面
+// 在修改Chart裡面的內容
 
 var chart = c3.generate({
     size: {
@@ -26,9 +27,9 @@ var chart = c3.generate({
     data: {
         x: 'x',
         columns: [
-            ['x', '2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29'],
-            ['每月人數', 188, 571, 213, 132, `${result - Arrresult}`],
-            ['總數', 188, 759, 912, 1104,result],
+            ['x', '2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29','2024-03-30'],
+            ['每月人數', 188, 571, 213, 132, 518,`${result - Arrresult}`],
+            ['總數', 188, 759, 912, 1104,1622,result],
 
         ],
         type: 'bar',
