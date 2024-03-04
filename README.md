@@ -1,3 +1,4 @@
+![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Signal&stargazers=1&theme=Light)
 ## Taiwan Clash Royale Ranking System - TCRS
 
 你是否想與其他玩家比較天梯的實力？<br>
