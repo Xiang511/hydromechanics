@@ -1,8 +1,8 @@
-![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?description=1&font=Inter&language=1&name=1&owner=1&pattern=Signal&stargazers=1&theme=Light)
-## Taiwan Clash Royale Ranking System - TCRS
+# Taiwan Clash Royale Ranking System - TCRS
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green)
+![GitHub License](https://img.shields.io/github/license/Xiang511/CR-API?style=for-the-badge)
 
-你是否想與其他玩家比較天梯的實力？<br>
-TCRS 可以幫助你做到這一點<br>
 系統會記錄玩家排名，並顯示在網站上。<br>
 你可以隨時查看自己的積分和排名，並與其他玩家競爭。<br>
 
