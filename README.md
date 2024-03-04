@@ -1,11 +1,10 @@
 ![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?font=Inter&language=1&name=1&theme=Auto)
-# Taiwan Clash Royale Ranking System - TCRS
-![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)
+# CR-Ranking-System
 ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green)
-![GitHub License](https://img.shields.io/github/license/Xiang511/CR-API?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge)
 
 系統會記錄玩家排名，並顯示在網站上。<br>
-你可以隨時查看自己的積分和排名，並與其他玩家競爭。<br>
+
 
 ## 和Royale API 有甚麼不同
 - Royale API無法做到 統計臺灣地區所有人的歷史排名並比較
