@@ -1,7 +1,9 @@
 ![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?font=Inter&language=1&name=1&theme=Auto)
 # CR-Ranking-System
 ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green)
-![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge)
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/Xiang511/hydromechanics/latest?style=for-the-badge&color=green)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Xiang511/hydromechanics?style=for-the-badge&color=green)
+![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge&color=green)
 
 系統會記錄玩家排名，並顯示在網站上。<br>
 
