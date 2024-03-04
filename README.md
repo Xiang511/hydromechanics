@@ -1,3 +1,4 @@
+![hydromechanics](https://socialify.git.ci/Xiang511/hydromechanics/image?font=Inter&language=1&name=1&theme=Auto)
 # Taiwan Clash Royale Ranking System - TCRS
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green)
