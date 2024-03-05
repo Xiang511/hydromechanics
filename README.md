@@ -8,7 +8,7 @@
  Dashboard Website Implemented with HTML+CSS+Javascript+GoogleAppsScript<br>
 
 
-## Features
+### Features
 
 - Record the player’s best season ranking
 - Record the player’s previous season ranking
@@ -17,11 +17,11 @@
 - Record the player’s personal achievement records
 
 
-## What are the differences between this project and Royale API ?
+### What are the differences between this project and Royale API ?
 
 - Royale API cannot statistically rank and compare all players in the Taiwan region historically.
 - Royale API cannot simultaneously compare the detailed information of all players in the Taiwan region.
 
 
-## Contact Us
+### Contact Us
 - E-mail : toby91511@gmail.com
