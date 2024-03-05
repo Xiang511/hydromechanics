@@ -1,9 +1,9 @@
-# CR-Ranking-System
-![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=green)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Xiang511/hydromechanics?style=for-the-badge&color=green)
-![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge&color=green)
+# Taiwan-CR-Ranking-System
+![GitHub Release](https://img.shields.io/github/v/release/Xiang511/hydromechanics?display_name=release&style=for-the-badge&color=darkorchid)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Xiang511/hydromechanics?style=for-the-badge&color=darkorchid)
+![GitHub License](https://img.shields.io/github/license/Xiang511/hydromechanics?style=for-the-badge&color=darkorchid)
 
-Dashboard Website Implemented with HTML+CSS+Javascript+GoogleAppsScript<br>
+ Dashboard Website Implemented with HTML+CSS+Javascript+GoogleAppsScript<br>
 
 
 ## Features
