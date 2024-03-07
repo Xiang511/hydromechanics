@@ -1,6 +1,8 @@
 //即時查詢總人數
 const firstSpan = document.querySelector('.sitestatesJs');
+//取得字串
 const text = firstSpan.textContent;
+//取得數字
 const result = text.substring(text.length - 4);
 // console.log(text)
 // console.log(result)
