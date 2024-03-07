@@ -4,8 +4,21 @@ const firstSpan = document.querySelector('.sitestatesJs');
 const text = firstSpan.textContent;
 //取得數字
 const result = text.substring(text.length - 4);
-// console.log(text)
-// console.log(result)
+
+
+//今日訪客
+const spans = document.querySelectorAll(".sitestatesJs");
+const secondSpan = spans[1];
+const secondSpan_txt = secondSpan.textContent;
+const secondSpan_result = secondSpan_txt.substring(text.length - 4);
+
+
+// console顯示
+console.log(text);
+console.log(secondSpan_txt);
+
+
+
 
 //即時計算當月人數
 const arr = [188, 571, 213, 132,518];
@@ -22,7 +35,7 @@ var chart = c3.generate({
     },
     padding: {
         top: 30,
-        right: 50,
+        right: 60,
         bottom: 10,
         // left: 100,
     },
@@ -34,9 +47,13 @@ var chart = c3.generate({
             ['總數', 188, 759, 912, 1104,1622,result],
 
         ],
+        axes: {
+            每月人數: 'y',
+            總數: 'y2'
+        },
         type: 'bar',
         types: {
-            總數: 'spline',
+            總數: 'bar',
         },
 
     },
@@ -46,8 +63,23 @@ var chart = c3.generate({
             tick: {
                 fit: true,
                 format: " %b %y"
+            },
+            
+        },
+        y: {
+            show: true,
+            label:{
+                text: 'monthly page views',
+                position: 'outer-middle'
             }
         },
+        y2: {
+            show: true,
+            label:{
+                text: 'total page views ',
+                position: 'outer-middle'
+            }
+        }
 
     },
     legend: {
@@ -57,7 +89,7 @@ var chart = c3.generate({
     //     show: false
     // },
     color: {
-        pattern: ['#aec7e8', '#1f77b4']
+        pattern: ['red', '#1f77b4']
     }
 });
 setTimeout(function () {
