@@ -4,8 +4,21 @@ const firstSpan = document.querySelector('.sitestatesJs');
 const text = firstSpan.textContent;
 //取得數字
 const result = text.substring(text.length - 4);
-// console.log(text)
-// console.log(result)
+
+
+//今日訪客
+const spans = document.querySelectorAll(".sitestatesJs");
+const secondSpan = spans[1];
+const secondSpan_txt = secondSpan.textContent;
+const secondSpan_result = secondSpan_txt.substring(text.length - 4);
+
+
+// console顯示
+console.log(text);
+console.log(secondSpan_txt);
+
+
+
 
 //即時計算當月人數
 const arr = [188, 571, 213, 132,518];
