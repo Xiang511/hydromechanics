@@ -194,10 +194,24 @@
 						</li>
 					</ul>
 				</div>
-				<!-- <a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
-				</a> -->
+				<a href="" class="btn-download">
+					<i class='bx bx-calendar-check' ></i>	
+					<span id="updated" class="text">Download PDF</span>
+				</a>
+				<script>
+					var xhr = new XMLHttpRequest();
+					xhr.open('get', 'data.json', true);
+					xhr.send();
+					xhr.onload = function () {
+						const data = JSON.parse(this.responseText);
+						//更新時間
+						LastUpdateDate = data.LastUpdateDate
+						document.getElementById("updated").innerHTML = "資料更新日期 "+"\n"+LastUpdateDate ;
+					}
+					xhr.onerror = function (err) {
+						console.log('錯誤', err)
+					}
+				</script>
 			</div>
 
 			<!-- <ul class="box-info">
