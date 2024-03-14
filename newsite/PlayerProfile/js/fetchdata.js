@@ -48,8 +48,8 @@ xhr.onload = function () {
     // if(aboutus != null)
     // PlayerAboutus.innerHTML += aboutus;
 
-    // if(message != null)
-    // PlayerMessage.innerHTML += message;
+    if(message != null)
+    PlayerMessage.innerHTML += message;
 
     // if(messageSec != null){
     //     PlayermessageSec.innerHTML += messageSec;
