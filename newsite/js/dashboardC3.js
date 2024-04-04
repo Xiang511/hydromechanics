@@ -58,7 +58,7 @@ var chart = c3.generate({
             type: 'timeseries',
             tick: {
                 fit: true,
-                format: " %b %y"
+                format: " %b"
             }
         },
 
