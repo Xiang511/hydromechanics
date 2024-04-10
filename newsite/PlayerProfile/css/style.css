@@ -42,6 +42,12 @@ img {
     color: #fff;
 }
 
+/* 隱藏giscus */
+.color-bg-primary.color-border-primary.gsc-comment-box {
+    display: none;
+}
+
+
 @media screen and (max-width:992px) {
     .hb {
         width: 40px;
@@ -465,6 +471,7 @@ body {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         padding: 12px;
         flex-grow: 1;
+        overflow: scroll;
     }
 
     .content {
