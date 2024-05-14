@@ -214,7 +214,7 @@
 				</div>
 				<a href="" class="btn-download">
 					<i class='bx bx-calendar-check'></i>
-					<span id="updated" class="text">Download PDF</span>
+					<span id="updatedDate" class="text"></span>
 				</a>
 				<script>
 					var xhr = new XMLHttpRequest();
@@ -224,7 +224,7 @@
 						const data = JSON.parse(this.responseText);
 						//更新時間
 						LastUpdateDate = data.LastUpdateDate
-						document.getElementById("updated").innerHTML = "資料更新日期 " + "\n" + LastUpdateDate;
+						document.getElementById("updatedDate").innerHTML = "資料更新日期 " + "\n" + LastUpdateDate;
 					}
 					xhr.onerror = function (err) {
 						console.log('錯誤', err)
@@ -233,41 +233,62 @@
 			</div>
 
 			<ul class="box-info">
-				<li id="AboutUs">
-					<a href="AboutUs.html"><i class='bx bxs-detail'></i></a>
+				<li>
+					<i class='bx bx-info-square'></i>
 					<span class="text">
-						<h3><a href="AboutUs.html">關於我們</a></h3>
-
-					</span>
-
-				</li>
-				<li id="LadderRanking">
-					<a href="LadderRanking.html"><i class='bx bxs-dashboard'></i></a>
-					<span class="text">
-						<h3><a href="LadderRanking.html">天梯紀錄</a></h3>
-
+						<h3 id="version"></h3>
+						<p>目前版本</p>
 					</span>
 				</li>
-				<li id="PlayerCareerRecord">
-					<a href="PlayerCareerRecord.html"><i class='bx bxs-grid-alt'></i></a>
+				<li>
+					<i class='bx bxs-calendar-check'></i>
 					<span class="text">
-						<h3><a href="PlayerCareerRecord.html">生涯紀錄</a></h3>
-
+						<h3 id="updated"></h3>
+						<p>下次更新時間</p>
 					</span>
 				</li>
-				<li id="DeveloperAnnouncement">
-					<a href="DeveloperAnnouncement.html"><i class='bx bx-code-alt'></i></a>
+				<li>
+					<i class='bx bxs-group'></i>
 					<span class="text">
-						<h3><a href="DeveloperAnnouncement.html">版本紀錄</a></h3>
+						<h3 id="RecordNum"></h3>
+						<p>紀錄人數</p>
+						<script>
+							var xhr = new XMLHttpRequest();
+							xhr.open('get', 'data.json', true);
+							xhr.send();
+
+							xhr.onload = function () {
+								const data = JSON.parse(this.responseText);
+								// 版本
+								version = data.version
+								document.getElementById("version").innerHTML = version;
+
+								//更新時間
+								updated = data.Updated
+								document.getElementById("updated").innerHTML = updated;
+
+								// 紀錄人數
+								Record = data.RecordNumber
+								document.getElementById("RecordNum").innerHTML = Record;
+
+
+							}
+							xhr.onerror = function (err) {
+								console.log('錯誤', err)
+							}
+						</script>
 					</span>
 				</li>
 				<!-- <li>
-					<i class='bx bxs-bar-chart-alt-2' ></i>
+					<a href="https://github.com/Xiang511/hydromechanics"><i class='bx bxl-github'
+							style="background: #000 ; color: white;"></i></a>
 					<span class="text">
-						<h3><a href="#">圖表</a></h3>
+						<a href="https://github.com/Xiang511/hydromechanics">
+							<h3 id="updated">GitHub</h3>
+						</a>
+						<a href="https://github.com/Xiang511/hydromechanics">點擊前往</a>
 					</span>
 				</li> -->
-
 
 			</ul>
 			<div class="table-data ">
