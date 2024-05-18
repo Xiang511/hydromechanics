@@ -31,7 +31,7 @@ const Arrresult = arr.reduce((a, b) => a + b);
 
 var chart = c3.generate({
     size: {
-        height: 380,
+        height: 430,
     },
     padding: {
         top: 30,
@@ -42,14 +42,14 @@ var chart = c3.generate({
     data: {
         x: 'x',
         columns: [
-            ['x', '2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29','2024-03-31','2024-04-30','2024-05-31'],
-            ['每月人數', 188, 571, 213, 132, 518, 270,255,`${result - Arrresult}`],
-            ['總數', 188, 759, 912, 1104,1622,1892,2147,result],
+            ['x','2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29','2024-03-31','2024-04-30','2024-05-31'],
+            ['每月瀏覽人數', 188, 571, 213, 132, 518, 270,255,`${result - Arrresult}`],
+            ['瀏覽總數', 188, 759, 912, 1104,1622,1892,2147,result],
 
         ],
-        type: 'bar',
+        type: 'area-spline',
         types: {
-            總數: 'spline',
+            瀏覽總數: 'area-spline',
         },
 
     },
@@ -70,7 +70,7 @@ var chart = c3.generate({
     //     show: false
     // },
     color: {
-        pattern: ['#aec7e8', '#1f77b4']
+        pattern: [ '#3C91E6','#FD7238']
     }
 });
 setTimeout(function () {
