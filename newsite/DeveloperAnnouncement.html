@@ -208,62 +208,7 @@
 					<span class="text">Download PDF</span>
 				</a> -->
 			</div>
-			<ul class="box-info">
-				<li>
-					<i class='bx bx-info-square'></i>
-					<span class="text">
-						<h3 id="version"></h3>
-						<p>目前版本</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-calendar-check'></i>
-					<span class="text">
-						<h3 id="updated"></h3>
-						<p>下次更新時間</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group'></i>
-					<span class="text">
-						<h3 id="RecordNum"></h3>
-						<p>紀錄人數</p>
-						<script>
-							var xhr = new XMLHttpRequest();
-							xhr.open('get', 'data.json', true);
-							xhr.send();
-
-							xhr.onload = function () {
-								const data = JSON.parse(this.responseText);
-								// 版本
-								version = data.version
-								document.getElementById("version").innerHTML = version;
-
-								//更新時間
-								updated = data.Updated
-								document.getElementById("updated").innerHTML = updated;
-
-								// 紀錄人數
-								Record = data.RecordNumber
-								document.getElementById("RecordNum").innerHTML = Record;
-
-
-							}
-							xhr.onerror = function (err) {
-								console.log('錯誤', err)
-							}
-						</script>
-					</span>
-				</li>
-				<li >
-					<a href="https://github.com/Xiang511/hydromechanics"><i class='bx bxl-github' style="background: #000 ; color: white;"></i></a>
-					<span class="text" >
-						<a href="https://github.com/Xiang511/hydromechanics"><h3 id="updated">GitHub</h3></a>
-						<a href="https://github.com/Xiang511/hydromechanics">點擊前往</a>
-					</span>
-				</li>
-
-			</ul>
+			
 			<div class="table-data">
 				<div class="order">
 					<section class="search gitmes" id="search">
