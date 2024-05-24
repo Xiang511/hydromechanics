@@ -11,7 +11,7 @@ allSideMenu.forEach(item => {
   })
 });
 
-const driver = window.driver.js.driver;
+// const driver = window.driver.js.driver;
 
 //slider
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
