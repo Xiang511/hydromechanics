@@ -1,0 +1,382 @@
+::-webkit-scrollbar {
+
+    width: .5px;
+
+}
+
+::-webkit-scrollbar-button {
+
+    background: transparent;
+
+    border-radius: 4px;
+
+}
+
+::-webkit-scrollbar-track-piece {
+
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 4px;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* border: 1px solid slategrey; */
+
+}
+
+::-webkit-scrollbar-track {
+
+    box-shadow: transparent;
+
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+  
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.aboutus{
+    min-height: 70vh;
+    /* background-image: url(../img/banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background: rgba(97, 35, 179, 0.6) */
+}
+.aboutus .txt, .aboutus .title, .aboutus .wrap{
+    text-align: justify;
+}
+.txt, .title, .wrap, .match .wrap{
+    /* color: #FFF; */
+    max-width: 1400px;
+    width: 96%;
+    margin: auto;
+    
+}
+.title{
+    margin-bottom: 2em;
+}
+.title br{
+    font-size: 1em;
+}
+.title h1{
+    margin-left: .1em;
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+.title p{
+    font-size: 1em;
+    margin-left: .6em;
+    line-height: 1.8em;
+}
+.txt{
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+.txt h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+.txt p{
+    font-size: 1em;
+    margin-left: 4px;
+    line-height: 1.8em;
+}
+.txt li{
+    margin: .5em 4px;
+}
+.aboutus .containers .content p{
+    text-align: left;
+    font-size: .5em;
+}
+.aboutus .containers .content span{
+    text-align: left;
+    font-size: 0.8em;
+}
+.aboutus .txts .txt{
+    position: relative;
+}
+.aboutus .txts .txt img{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.imganimation:hover{
+    animation: imganimation 1s linear infinite;
+  }
+  
+  @keyframes imganimation {
+    0% {
+      scale: 1.1;
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(5px);
+    }
+}
+.match{
+    margin-top: 1.5em;
+    background: #f4f4f4;
+    
+}
+.match .title{
+    padding: 1.2em;
+}
+.center h1, .center p{
+    
+    text-align: center;
+}
+.center p{
+   
+}
+
+
+.cards .mp4 .mv{
+    width: 100%;
+    aspect-ratio: 560/315;
+}
+.cards .mp4 .mv iframe{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+.card-item .txt{
+    display: flex;
+    flex-direction: column;
+  
+}
+.alignc{
+    justify-content: center;
+}
+.card-item .txt h4{
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}
+.card-item span{
+    font-size: 1.3em;
+}
+.card-item .txt p{
+    font-size: 1.3em;
+}
+
+.more{
+    margin-top: 1.2em;
+    display: inline-block;
+    width: 6em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5%;
+    padding: 10px;
+    background: #7974aa;
+    color: white;
+}
+.cards .mp4 .mv{
+    width: 100%;
+    aspect-ratio: 560/315;
+}
+.cards .mp4 .mv iframe{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+.cards .card-item:nth-child(2n){
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    flex-direction: row;
+    
+}
+.cards .card-item:nth-child(2n+1){
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.search{
+    min-height: 30vh;
+    padding: 10px;
+}
+.search .title{
+    margin-top: 2em;
+}
+
+
+.dataTables_length{
+    display: none;
+}
+#myTable_previous , #myTable_next{
+    display: none;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+.result{
+    max-width: 1400px;
+    margin: auto;
+}
+.form input {
+    all: unset;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3em;
+    text-align: center;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+input:hover{
+    background: blue;
+    color: #fff;
+}
+.load{
+    display: none;
+}
+#myTable_paginate{
+    margin-top: 0.5em;
+}
+
+
+
+
+@media screen and (min-width:768px){
+        .aboutus .wrap{
+            display: flex;
+            justify-content: center;
+        } 
+        .aboutus .wrap .main-container{
+            width: 49%;
+        }
+        .grow{
+            flex-grow: 1;
+        }
+        .aboutus .txts{
+            width: 49%;
+        }
+        .aboutus .containers .content p{
+            text-align: left;
+            font-size: .8em;
+        }
+        .aboutus .containers .content span{
+            text-align: left;
+            font-size: 1em;
+        }
+        .card-item{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .mp4{
+            width: 50%;
+        }
+        .card-item .txt{
+            width: 50%;
+        }
+        .card-item .txt h4{
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+        }
+        .card-item span{
+            font-size: 1em;
+        }
+        .cards .card-item:nth-child(2n){
+            margin: 0;
+            flex-direction: row;
+            
+        }
+        .cards .card-item:nth-child(2n+1){
+            margin: 0;
+        }
+        #secondh4{
+            padding-left: 1.5em;
+        }
+        .form input {
+            width: 40%;
+        }
+        .search .title{
+            margin-top: 4em;
+        }
+
+}
+
+@media screen and (min-width:992px){
+    .mp4{
+        width: 49%;
+    }
+    .card-item .txt{
+        width: 49%;
+    }
+    .card-item .grow{
+        flex-grow: 1;
+    }
+    .card-item .txt h4{
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+    }
+    .card-item span{
+        font-size: 1.2em;
+    }
+    .form input {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .aboutus .txt, .title, .wrap{
+        width: 82%;
+    }
+    .aboutus .title p{
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 2em;
+        margin-left:4px ;
+    }
+    .aboutus .wrap .main-container{
+        width: 50%;
+    }
+    .aboutus .grow{
+        flex-grow: 0;
+    }
+    .aboutus .txts{
+        width: 50%;
+    }
+    .aboutus .txt p{
+        font-size: 1.2em;
+    }
+    .aboutus .txt li{
+        font-size: 1.2em;
+    }   
+    .aboutus .containers .content p{
+        text-align: left;
+        font-size: .9em;
+    }
+    .aboutus .containers .content span{
+        text-align: left;
+        font-size: 1em;
+    }
+    .card-item .txt h4{
+        font-size: 2.2em;
+        margin-bottom: 0.5em;
+    }
+    .mp4{
+        width: 49%;
+    }
+    .card-item .txt{
+        width: 49%;
+    }
+    
+}

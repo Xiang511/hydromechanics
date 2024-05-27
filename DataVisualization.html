@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>台灣皇室排名系統</title>
+
+	<link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" />
+	<link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- icon -->
+
+	<link rel="stylesheet" href="css/TCRSoriginal.css">
+	<link rel="stylesheet" href="css/TCRS.css">
+
+
+
+	<!-- jQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- jQUERY -->
+
+	<!-- datatables -->
+	<!-- main -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+	<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+	<!-- main -->
+
+	<!-- fixed col -->
+	<link rel="stylesheet" href=https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
+
+	<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+	<!-- fixed col -->
+
+	<!-- 表格拖拉 -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/colreorder/1.7.0/css/colReorder.dataTables.min.css">
+
+	<script src="https://cdn.datatables.net/colreorder/1.7.0/js/dataTables.colReorder.min.js"></script>
+	<!-- 表格拖拉 -->
+	<!-- datatables -->
+
+
+</head>
+
+<body>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="https://xiang511.com/TCRS/" class="brand">
+			<!-- <i class='bx bxs-smile'></i> -->
+			<i class='fa fa-bar-chart'></i>
+			<span class="text">TCRS</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="TCRS.html">
+					<i class='bx bxs-home'></i>
+					<span class="text">首頁</span>
+				</a>
+			</li>
+			<li>
+				<a href="AboutUs.html">
+					<i class='bx bxs-detail'></i>
+					<span class="text">關於我們</span>
+				</a>
+			</li>
+			<li>
+				<a href="LadderRanking.html">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">天梯紀錄</span>
+				</a>
+			</li>
+			<li>
+				<a href="PlayerCareerRecord.html">
+					<i class='bx bxs-grid-alt'></i>
+					<span class="text">生涯紀錄</span>
+				</a>
+			</li>
+			<li>
+				<a href="Player-Profile.html">
+					<i class='bx bxs-crown'></i>
+					<span class="text">個人成就</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="DataVisualization.html">
+					<i class='bx bxs-bar-chart-alt-2'></i>
+					<span class="text">統計圖表</span>
+				</a>
+			</li>
+			<li>
+				<a href="DeveloperAnnouncement.html">
+					<i class='bx bx-code-alt'></i>
+					<span class="text">版本紀錄</span>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://xiang511.com/TCRS/source/Open-Source.html">
+					<i class='bx bx-code'></i>
+					<span class="text">程式碼開源</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a href="message.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">聊天室</span>
+				</a>
+			</li> -->
+			<!-- <li>
+				<a href="#">
+					<i class='bx bx-comment-detail'></i>
+					<span class="text">常見問題</span>
+				</a>
+			</li> -->
+
+			<!-- <li class="">
+				<a target="_blank" href="https://xiang511.com/CR/">
+					<i class='bx bxs-window-alt'></i>
+					<span class="text">流體力學</span>
+				</a>
+			</li> -->
+			<!-- <li class="undone">
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">個人資料(尚未完成)</span>
+				</a>
+			</li> -->
+
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="https://SiteStates.com" title="站長工具">
+					<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
+				</a>
+			</li> -->
+			<!-- <li>
+					<a href="https://www.google.com.tw/?hl=zh_TW" class="logout">
+						<i class='bx bxs-log-out-circle' ></i>
+						<span class="text">登出</span>
+					</a>
+				</li> -->
+
+		</ul>
+		<div class="track" style="display: none;">
+			<a href="https://SiteStates.com" title="站長工具">
+				<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
+			</a>
+		</div>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu'></i>
+			<!-- <a href="#" class="nav-link">Categories</a> -->
+			<form action="#">
+				<!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<!-- <label for="switch-mode" class="switch-mode"></label> -->
+			<!-- <a href="#" class="notification">
+					<i class='bx bxs-bell' ></i>
+					<span class="num"></span>
+				</a> -->
+			<!-- <a href="https://xiang511.github.io/hydromechanics/newsite/index.html" class="profile">
+				<img style="border-radius: 0;" src="img/purr-svgrepo-com.svg">
+			</a> -->
+		</nav>
+		<!-- NAVBAR -->
+
+		<main>
+			<div class="container text-center" id="error">
+				<svg height="100" width="100">
+					<polygon points="50,25 17,80 82,80" stroke-linejoin="round"
+						style="fill:none;stroke:#ff8a00;stroke-width:8" />
+					<text x="42" y="74" fill="#ff8a00" font-family="sans-serif" font-weight="900"
+						font-size="42px">!</text>
+				</svg>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-icon text-warning"><span class="uxicon uxicon-alert"></span></div>
+						<h1>Resource not found </h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-push-3">
+						<p class="lead">Website is being redesigned</p>
+						<p class="lead">
+							<a href="mailto:toby91511@gmail.com">
+								toby91511@gmail.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<style type="text/css">
+			body,
+			h1,
+			p {
+				font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-weight: normal;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+
+			.container {
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 177px;
+				max-width: 1170px;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			.row:before,
+			.row:after {
+				display: table;
+				content: " ";
+			}
+
+			.col-md-6 {
+				width: 50%;
+			}
+
+			.col-md-push-3 {
+				margin-left: 25%;
+			}
+
+			h1 {
+				font-size: 48px;
+				font-weight: 300;
+				margin: 0 0 20px 0;
+			}
+
+			.lead {
+				font-size: 21px;
+				font-weight: 200;
+				margin-bottom: 20px;
+			}
+
+			p {
+				margin: 0 0 10px;
+			}
+
+			a {
+				color: #3282e6;
+				text-decoration: none;
+			}
+		</style>
+	</section>
+	<!-- CONTENT -->
+
+
+	<script src="js/dashboard.js"></script>
+</body>
+
+</html>
