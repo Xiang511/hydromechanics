@@ -52,7 +52,7 @@
 		<a href="https://xiang511.com/posts/TCRS/" class="brand">
 			<!-- <i class='bx bxs-smile'></i> -->
 			<i class='bx bxs-book-bookmark'></i>
-			<span class="text" >Blog</span>
+			<span class="text">Blog</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -196,18 +196,7 @@
 					<span id="updatedDate" class="text"></span>
 				</a>
 				<script>
-					var xhr = new XMLHttpRequest();
-					xhr.open('get', 'data.json', true);
-					xhr.send();
-					xhr.onload = function () {
-						const data = JSON.parse(this.responseText);
-						//更新時間
-						LastUpdateDate = data.LastUpdateDate
-						document.getElementById("updatedDate").innerHTML = "資料更新日期 " + "\n" + LastUpdateDate;
-					}
-					xhr.onerror = function (err) {
-						console.log('錯誤', err)
-					}
+					
 				</script>
 			</div>
 
@@ -231,31 +220,6 @@
 					<span class="text">
 						<h3 id="RecordNum"></h3>
 						<p>紀錄人數</p>
-						<script>
-							var xhr = new XMLHttpRequest();
-							xhr.open('get', 'data.json', true);
-							xhr.send();
-
-							xhr.onload = function () {
-								const data = JSON.parse(this.responseText);
-								// 版本
-								version = data.version
-								document.getElementById("version").innerHTML = version;
-
-								//更新時間
-								updated = data.Updated
-								document.getElementById("updated").innerHTML = updated;
-
-								// 紀錄人數
-								Record = data.RecordNumber
-								document.getElementById("RecordNum").innerHTML = Record;
-
-
-							}
-							xhr.onerror = function (err) {
-								console.log('錯誤', err)
-							}
-						</script>
 					</span>
 				</li>
 				<!-- <li>
@@ -326,17 +290,13 @@
 					</ul>
 				</div>
 			</div>
-			</div>
-
-
-
-
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
 	<script src="js/dashboardC3.js"></script>
 	<script src="js/driver.js"></script>
+	<script src="js/dashboard.js"></script>
 </body>
 
 </html>

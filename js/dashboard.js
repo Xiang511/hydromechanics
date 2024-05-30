@@ -1,87 +1,50 @@
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
-allSideMenu.forEach(item=> {
-	const li = item.parentElement;
+allSideMenu.forEach(item => {
+  const li = item.parentElement;
 
-	item.addEventListener('click', function () {
-		allSideMenu.forEach(i=> {
-			i.parentElement.classList.remove('active');
-		})
-		li.classList.add('active');
-	})
+  item.addEventListener('click', function () {
+    allSideMenu.forEach(i => {
+      i.parentElement.classList.remove('active');
+    })
+    li.classList.add('active');
+  })
 });
 
+//側選單
 
-
-//driver.js:45行
-// TOGGLE SIDEBAR
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
 const sidebar = document.getElementById('sidebar');
 const track = document.querySelector('.track');
 
+
 menuBar.addEventListener('click', function () {
-	sidebar.classList.toggle('hide');
-	track.classList.toggle('ml-1-5');
+  sidebar.classList.toggle('hide');
+  track.classList.toggle('ml-1-5');
 })
 
 
+fetch('data.json')
+	.then(res => {
+		return res.json();
+	}).then(result => {
 
+		// 資料更新日期
+		LastUpdateDate = result.LastUpdateDate
+		document.getElementById("updatedDate").innerHTML = "資料更新日期 " + "\n" + LastUpdateDate;
 
+		// 版本
+		version = result.version
+		document.getElementById("version").innerHTML = version;
 
+		//更新時間
+		updated = result.Updated
+		document.getElementById("updated").innerHTML = updated;
 
-// if (window.innerWidth > 1300) {
-// 	sidebar.classList.remove('hide');
-// 	track.classList.add('ml-1-5');
-// }
+		// 紀錄人數
+		Record = result.RecordNumber
+		document.getElementById("RecordNum").innerHTML = Record;
 
-
-
-
-
-
-const searchButton = document.querySelector('#content nav form .form-input button');
-const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
-const searchForm = document.querySelector('#content nav form');
-
-// searchButton.addEventListener('click', function (e) {
-// 	if(window.innerWidth < 576) {
-// 		e.preventDefault();
-// 		searchForm.classList.toggle('show');
-// 		if(searchForm.classList.contains('show')) {
-// 			searchButtonIcon.classList.replace('bx-search', 'bx-x');
-// 		} else {
-// 			searchButtonIcon.classList.replace('bx-x', 'bx-search');
-// 		}
-// 	}
-// })
-
-
-
-
-
-// if(window.innerWidth < 768) {
-// 	sidebar.classList.add('hide');
-// } else if(window.innerWidth > 576) {
-// 	searchButtonIcon.classList.replace('bx-x', 'bx-search');
-// 	searchForm.classList.remove('show');
-// }
-
-
-// window.addEventListener('resize', function () {
-// 	if(this.innerWidth > 576) {
-// 		searchButtonIcon.classList.replace('bx-x', 'bx-search');
-// 		searchForm.classList.remove('show');
-// 	}
-// })
-
-
-
-const switchMode = document.getElementById('switch-mode');
-
-switchMode.addEventListener('change', function () {
-	if(this.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-})
+	}).catch(error => {
+		console.log(`Error: ${error}`);
+	});
