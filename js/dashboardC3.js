@@ -45,7 +45,7 @@ console.log(onlineSpan_txt);
 
 var chart = c3.generate({
     size: {
-        height: 450,
+        height: 440,
     },
     padding: {
         top: 30,
