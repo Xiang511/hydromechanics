@@ -24,7 +24,7 @@ menuBar.addEventListener('click', function () {
 })
 
 
-fetch('data.json')
+fetch('json/data.json')
 	.then(res => {
 		return res.json();
 	}).then(result => {
