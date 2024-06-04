@@ -1,6 +1,10 @@
 window.onload = function () {
 
-    fetch('json/career.json')
+    fetch('json/career.json', {
+        headers: {
+            'Cache-Control': 'no-cache, must-revalidate'
+        }
+    })
         .then(res => {
             return res.json();
         }).then(result => {

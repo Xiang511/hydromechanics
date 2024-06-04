@@ -1,6 +1,11 @@
 window.onload = function () {
 
-    fetch('json/player.json')
+    fetch('json/player.json', {
+        headers: {
+            'Cache-Control': 'no-cache, must-revalidate'
+        }
+    })
+
         .then(res => {
             return res.json();
         }).then(result => {

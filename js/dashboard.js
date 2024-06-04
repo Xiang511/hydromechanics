@@ -1,14 +1,14 @@
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
 allSideMenu.forEach(item => {
-  const li = item.parentElement;
+	const li = item.parentElement;
 
-  item.addEventListener('click', function () {
-    allSideMenu.forEach(i => {
-      i.parentElement.classList.remove('active');
-    })
-    li.classList.add('active');
-  })
+	item.addEventListener('click', function () {
+		allSideMenu.forEach(i => {
+			i.parentElement.classList.remove('active');
+		})
+		li.classList.add('active');
+	})
 });
 
 //側選單
@@ -19,12 +19,16 @@ const track = document.querySelector('.track');
 
 
 menuBar.addEventListener('click', function () {
-  sidebar.classList.toggle('hide');
-  track.classList.toggle('ml-1-5');
+	sidebar.classList.toggle('hide');
+	track.classList.toggle('ml-1-5');
 })
 
 
-fetch('json/data.json')
+fetch('json/data.json', {
+	headers: {
+		'Cache-Control': 'no-cache, must-revalidate'
+	}
+})
 	.then(res => {
 		return res.json();
 	}).then(result => {
