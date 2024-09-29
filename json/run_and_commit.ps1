@@ -1,3 +1,5 @@
+# 需先cd到json目錄下
+
 # 執行 Python 腳本
 python test.py;
 node test.js;
