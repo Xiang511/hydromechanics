@@ -19,12 +19,12 @@ const onlineSpan_txt = onlineSpan.textContent;
 // const onlineSpan_result = onlineSpan_txt.substring(text.length - 4);
 
 //即時計算當月人數
-const arr = [188, 571, 213, 132,518,270,255,219,193,70,170,132,84,60,74,63,58];
+const arr = [188, 571, 213, 132,518,270,255,219,193,70,170,132,84,60,74,63,58,60,55];
 const Arrresult = arr.reduce((a, b) => a + b);
 month = result - Arrresult
 
 document.getElementById("Total").innerHTML = "累計訪客:"+ result;
-document.getElementById("month").innerHTML = "本月訪客:"+ month;
+// document.getElementById("month").innerHTML = "本月訪客:"+ month;
 document.getElementById("Today").innerHTML = secondSpan_txt;
 document.getElementById("online").innerHTML = onlineSpan_txt;
 
@@ -56,11 +56,9 @@ var chart = c3.generate({
     data: {
         x: 'x',
         columns: [
-            ['x','2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29','2024-03-31','2024-04-30','2024-05-31','2024-06-30','2024-07-31','2024-08-31','2024-09-30','2024-10-31','2024-11-30','2024-12-31','2025-01-31','2025-02-28','2025-03-31'],
-            ['每月瀏覽人數', 188, 571, 213, 132, 518, 270,255,219,193,70,170,132,84,60,74,63,58,`${result - Arrresult}`],
-            ['瀏覽總數', 188, 759, 912, 1104,1622,1892,2147,2366,2559,2629,2799 ,2931,3015,3075,3149,3212,3270,result],
+            ['x','2023-10-31', '2023-11-30', '2023-12-31', '2024-01-31', '2024-02-29','2024-03-31','2024-04-30','2024-05-31','2024-06-30','2024-07-31','2024-08-31','2024-09-30','2024-10-31','2024-11-30','2024-12-31','2025-01-31','2025-02-28','2025-03-31','2025-04-30'],
+            ['瀏覽總數', 188, 759, 912, 1104,1622,1892,2147,2366,2559,2629,2799 ,2931,3015,3075,3149,3212,3270,3330,3325],
         ],
-        type: 'area-spline',
         types: {
             瀏覽總數: 'area-spline',
         },
@@ -83,7 +81,7 @@ var chart = c3.generate({
     //     show: false
     // },
     color: {
-        pattern: [ '#3C91E6','#FD7238']
+        pattern: [ '#3C91E6']
     }
 });
 setTimeout(function () {
