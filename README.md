@@ -24,5 +24,4 @@
 - Royale API cannot simultaneously compare the detailed information of all players in the Taiwan region.
 
 
-## Contact Us
-- E-mail : toby91511@gmail.com
+
