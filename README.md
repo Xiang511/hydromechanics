@@ -9,6 +9,12 @@
  Dashboard Website Implemented with HTML+CSS+Javascript+GoogleAppsScript<br>
 
 
+> [!WARNING]
+> This project has reached version 2.0 and is no longer being actively maintained.  
+> Please visit the [**TCRS-Render**](https://github.com/Xiang511/TCRS-Render) for the latest version.
+
+
+
 ### Features
 
 - Record the player’s best season ranking
