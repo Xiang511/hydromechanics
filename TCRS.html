@@ -52,10 +52,10 @@
 	<!-- <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" /> -->
 	<!-- driver.js -->
+
 </head>
 
 <body>
-
 	<!-- SIDEBAR -->
 	<section id="sidebar" class="hide">
 		<a href="https://xiang511.com/posts/TCRS/" class="brand">
@@ -278,7 +278,7 @@
 						<li class="not-completed">
 							<p id="Total">累計人次</p>
 						</li>
-						
+
 						<li class="not-completed">
 							<p id="Today">今日訪客</p>
 						</li>
@@ -310,6 +310,15 @@
 	<script src="js/dashboardC3.js"></script>
 	<!-- <script src="js/driver.js"></script> -->
 	<script src="js/dashboard.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script>
+		Swal.fire({
+			title: "此版本的TCRS已停止維護</br>請前往 TCRS-Render ",
+			showDenyButton: false,
+			showCancelButton: true,
+			confirmButtonText: '<a style="color:#FFF; text-decoration: none" href="https://tcrs-api.onrender.com/">前往新網站 </a>'
+		})
+	</script>
 </body>
 
 </html>
