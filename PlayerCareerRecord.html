@@ -303,6 +303,18 @@
 
   <script src="js/fetchdata-career.js"></script>
   <script src="js/dashboard.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      Swal.fire({
+        title: "<strong>這個版本已經停止更新!</strong>",
+        icon: "info",
+        html: `請前往 <a href="https://tcrs-api.onrender.com/"> TCRS Render</a>`,
+        showCloseButton: false,
+        showCancelButton: false,
+        focusConfirm: true,
+        confirmButtonText: `Close`,
+      });
+    </script>
 </body>
 
 </html>

@@ -1,240 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="你是否想與其他玩家比較天梯的實力？系統會記錄玩家排名，並顯示在網站上。 你可以隨時查看自己的積分和排名，並與其他玩家競爭。"
+    />
+    <meta
+      name="keywords"
+      content="clashroyale,皇室戰爭,皇室戰爭排名系統,台灣皇室戰爭排名系統"
+    />
+    <meta name="author" content="Xiang" />
+    <meta property="og:title" content="”台灣皇室戰爭排名系統”" />
+    <meta property="og:site_name" content="台灣皇室戰爭排名系統" />
+    <meta property="og:image" content="img/tcrs.png" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>台灣皇室排名系統</title>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="你是否想與其他玩家比較天梯的實力？系統會記錄玩家排名，並顯示在網站上。 你可以隨時查看自己的積分和排名，並與其他玩家競爭。">
-	<meta name="keywords" content="clashroyale,皇室戰爭,皇室戰爭排名系統,台灣皇室戰爭排名系統">
-	<meta name="author" content="Xiang">
-	<meta property="og:title" content=”台灣皇室戰爭排名系統”>
-	<meta property="og:site_name" content="台灣皇室戰爭排名系統">
-	<meta property="og:image" content="img/tcrs.png">
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-	<meta http-equiv="expires" content="0">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>台灣皇室排名系統</title>
+    <link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" />
+    <link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
 
-	<link rel="icon" type="image/x-icon" href="img/chart-svgrepo-com.svg" />
-	<link rel="icon" type="image/x-icon" href="img/grid-svgrepo-com.svg" />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- icon -->
 
-	<!-- Boxicons -->
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- icon -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- icon -->
+    <link rel="stylesheet" href="css/TCRSoriginal.css" />
+    <link rel="stylesheet" href="css/TCRS.css" />
 
-	<link rel="stylesheet" href="css/TCRSoriginal.css">
-	<link rel="stylesheet" href="css/TCRS.css">
+    <!-- jQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jQUERY -->
 
+    <!-- Load c3.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css"
+      integrity="sha512-GQSxWe9Cj4o4EduO7zO9HjULmD4olIjiQqZ7VJuwBxZlkWaUFGCxRkn39jYnD2xZBtEilm0m4WBG7YEmQuMs5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <!-- Load d3.js and c3.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.0.0/d3.min.js"
+      integrity="sha512-55FY9DHtfMBE2epZhXrWn78so/ZT5/GCLim66+L83U5LghiYwVBAEris4/13Iab9S8C9ShJp3LQL/2raiaO+0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"
+      integrity="sha512-+IpCthlNahOuERYUSnKFjzjdKXIbJ/7Dd6xvUp+7bEw0Jp2dg6tluyxLs+zq9BMzZgrLv8886T4cBSqnKiVgUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-	<!-- jQUERY -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- jQUERY -->
-
-	<!-- Load c3.css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css"
-		integrity="sha512-GQSxWe9Cj4o4EduO7zO9HjULmD4olIjiQqZ7VJuwBxZlkWaUFGCxRkn39jYnD2xZBtEilm0m4WBG7YEmQuMs5Q=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-	<!-- Load d3.js and c3.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.0.0/d3.min.js"
-		integrity="sha512-55FY9DHtfMBE2epZhXrWn78so/ZT5/GCLim66+L83U5LghiYwVBAEris4/13Iab9S8C9ShJp3LQL/2raiaO+0w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"
-		integrity="sha512-+IpCthlNahOuERYUSnKFjzjdKXIbJ/7Dd6xvUp+7bEw0Jp2dg6tluyxLs+zq9BMzZgrLv8886T4cBSqnKiVgUw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-	<!-- driver.js -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <!-- driver.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" /> -->
-	<!-- driver.js -->
+    <!-- driver.js -->
+  </head>
 
-</head>
-
-<body>
-	<!-- SIDEBAR -->
-	<section id="sidebar" class="hide">
-		<a href="https://xiang511.com/posts/TCRS/" class="brand">
-			<!-- <i class='bx bxs-smile'></i> -->
-			<i class='bx bxs-book-bookmark'></i>
-			<span class="text">Blog</span>
-		</a>
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="TCRS.html">
-					<i class='bx bxs-home'></i>
-					<span class="text">首頁</span>
-				</a>
-			</li>
-			<!-- <li>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar" class="hide">
+      <a href="https://xiang511.com/posts/TCRS/" class="brand">
+        <!-- <i class='bx bxs-smile'></i> -->
+        <i class="bx bxs-book-bookmark"></i>
+        <span class="text">Blog</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="TCRS.html">
+            <i class="bx bxs-home"></i>
+            <span class="text">首頁</span>
+          </a>
+        </li>
+        <!-- <li>
 				<a href="AboutUs.html">
 					<i class='bx bxs-detail'></i>
 					<span class="text">關於我們</span>
 				</a>
 			</li> -->
-			<li>
-				<a href="LadderRanking.html">
-					<i class='bx bxs-dashboard'></i>
-					<span class="text">天梯紀錄</span>
-				</a>
-			</li>
-			<li>
-				<a href="PlayerCareerRecord.html">
-					<i class='bx bxs-grid-alt'></i>
-					<span class="text">生涯紀錄</span>
-				</a>
-			</li>
-			<li>
-				<a href="Player-Profile.html">
-					<i class='bx bxs-crown'></i>
-					<span class="text">個人成就</span>
-				</a>
-			</li>
-			<!-- <li class="">
+        <li>
+          <a href="LadderRanking.html">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">天梯紀錄</span>
+          </a>
+        </li>
+        <li>
+          <a href="PlayerCareerRecord.html">
+            <i class="bx bxs-grid-alt"></i>
+            <span class="text">生涯紀錄</span>
+          </a>
+        </li>
+        <li>
+          <a href="Player-Profile.html">
+            <i class="bx bxs-crown"></i>
+            <span class="text">個人成就</span>
+          </a>
+        </li>
+        <!-- <li class="">
 				<a href="DataVisualization.html">
 					<i class='bx bxs-bar-chart-alt-2'></i>
 					<span class="text">統計圖表</span>
 				</a>
 			</li> -->
-			<li>
-				<a href="DeveloperAnnouncement.html">
-					<i class='bx bx-code-alt'></i>
-					<span class="text">版本紀錄</span>
-				</a>
-			</li>
+        <li>
+          <a href="DeveloperAnnouncement.html">
+            <i class="bx bx-code-alt"></i>
+            <span class="text">版本紀錄</span>
+          </a>
+        </li>
 
-			<!-- <li>
+        <!-- <li>
 				<a target="_blank" href="https://xiang511.com/TCRS/source/Open-Source.html">
 					<i class='bx bx-code'></i>
 					<span class="text">程式碼開源</span>
 				</a>
 			</li> -->
-			<!-- <li>
+        <!-- <li>
 				<a href="message.html">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">聊天室</span>
 				</a>
 			</li> -->
-			<!-- <li>
+        <!-- <li>
 				<a href="#">
 					<i class='bx bx-comment-detail'></i>
 					<span class="text">常見問題</span>
 				</a>
 			</li> -->
 
-			<!-- <li class="">
+        <!-- <li class="">
 				<a target="_blank" href="https://xiang511.com/CR/">
 					<i class='bx bxs-window-alt'></i>
 					<span class="text">流體力學</span>
 				</a>
 			</li> -->
 
-			<!-- <li class="undone">
+        <!-- <li class="undone">
 				<a href="#">
 					<i class='bx bxs-group' ></i>
 					<span class="text">個人資料(尚未完成)</span>
 				</a>
 			</li> -->
-
-		</ul>
-		<ul class="side-menu">
-
-			<!-- <li>
+      </ul>
+      <ul class="side-menu">
+        <!-- <li>
 					<a href="https://www.google.com.tw/?hl=zh_TW" class="logout">
 						<i class='bx bxs-log-out-circle' ></i>
 						<span class="text">登出</span>
 					</a>
 				</li> -->
+      </ul>
+      <div class="track">
+        <a href="https://SiteStates.com" title="站長工具">
+          <img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
+        </a>
+      </div>
+    </section>
+    <!-- SIDEBAR -->
 
-		</ul>
-		<div class="track">
-			<a href="https://SiteStates.com" title="站長工具">
-				<img src="https://SiteStates.com/show/image/33556.jpg" border="0" />
-			</a>
-		</div>
-	</section>
-	<!-- SIDEBAR -->
-
-
-
-	<!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu'></i>
-			<!-- <a href="#" class="nav-link">Categories</a> -->
-			<form action="#">
-				<!-- <div class="form-input">
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <!-- <a href="#" class="nav-link">Categories</a> -->
+        <form action="#">
+          <!-- <div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div> -->
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<!-- <label for="switch-mode" class="switch-mode"></label> -->
-			<!-- <a href="#" class="notification">
+        </form>
+        <input type="checkbox" id="switch-mode" hidden />
+        <!-- <label for="switch-mode" class="switch-mode"></label> -->
+        <!-- <a href="#" class="notification">
 					<i class='bx bxs-bell' ></i>
 					<span class="num"></span>
 				</a> -->
-			<!-- <a href="https://xiang511.github.io/hydromechanics/newsite/index.html" class="profile">
+        <!-- <a href="https://xiang511.github.io/hydromechanics/newsite/index.html" class="profile">
 				<img style="border-radius: 0;" src="img/purr-svgrepo-com.svg">
 			</a> -->
 
+        <a href="https://github.com/Xiang511/hydromechanics"
+          ><i class="bx bxl-github"></i
+        ></a>
+      </nav>
+      <!-- NAVBAR -->
 
-			<a href="https://github.com/Xiang511/hydromechanics"><i class='bx bxl-github'></i></a>
-		</nav>
-		<!-- NAVBAR -->
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1 id="sys">台灣皇室排名系統</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">首頁</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">儀表板</a>
+              </li>
+            </ul>
+          </div>
+          <a href="" class="btn-download">
+            <i class="bx bx-calendar-check"></i>
+            <span id="updatedDate" class="text"></span>
+          </a>
+          <script></script>
+        </div>
 
-		<!-- MAIN -->
-		<main>
-			<div class="head-title">
-				<div class="left">
-					<h1 id="sys">台灣皇室排名系統</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">首頁</a>
-						</li>
-						<li><i class='bx bx-chevron-right'></i></li>
-						<li>
-							<a class="active" href="#">儀表板</a>
-						</li>
-					</ul>
-				</div>
-				<a href="" class="btn-download">
-					<i class='bx bx-calendar-check'></i>
-					<span id="updatedDate" class="text"></span>
-				</a>
-				<script>
-
-				</script>
-			</div>
-
-			<ul class="box-info">
-				<li>
-					<i class='bx bx-info-square'></i>
-					<span class="text">
-						<h3 id="version"></h3>
-						<p>目前版本</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-calendar-check'></i>
-					<span class="text">
-						<h3 id="updated"></h3>
-						<p>下次更新時間</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group'></i>
-					<span class="text">
-						<h3 id="RecordNum"></h3>
-						<p>紀錄人數</p>
-					</span>
-				</li>
-				<!-- <li>
+        <ul class="box-info">
+          <li>
+            <i class="bx bx-info-square"></i>
+            <span class="text">
+              <h3 id="version"></h3>
+              <p>目前版本</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3 id="updated"></h3>
+              <p>下次更新時間</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-group"></i>
+            <span class="text">
+              <h3 id="RecordNum"></h3>
+              <p>紀錄人數</p>
+            </span>
+          </li>
+          <!-- <li>
 					<a href="https://github.com/Xiang511/hydromechanics"><i class='bx bxl-github'
 							style="background: #000 ; color: white;"></i></a>
 					<span class="text">
@@ -244,81 +259,85 @@
 						<a href="https://github.com/Xiang511/hydromechanics">點擊前往</a>
 					</span>
 				</li> -->
-
-			</ul>
-			<div class="table-data ">
-				<div class="order  undonepic">
-					<section class="search" id="search">
-						<div class="head">
-							<!-- <h3>版面未完成 敬請期待!</h3> -->
-							<!-- <i class='bx bx-search' ></i>
+        </ul>
+        <div class="table-data">
+          <div class="order undonepic">
+            <section class="search" id="search">
+              <div class="head">
+                <!-- <h3>版面未完成 敬請期待!</h3> -->
+                <!-- <i class='bx bx-search' ></i>
 							<i class='bx bx-filter' ></i> -->
-							<div id="chart" style="max-width: 100%;"></div>
-						</div>
-						<script src="https://SiteStates.com/show/js_text/49bcb5c0fd457f7a07d5fba4e343a5bf"
-							type="text/javascript"></script>
-						<style>
-							.sitestatesJs {
-								display: none;
-							}
-						</style>
-					</section>
-				</div>
-				<div class="todo">
-					<!-- <div class="center">
+                <div id="chart" style="max-width: 100%"></div>
+              </div>
+              <script
+                src="https://SiteStates.com/show/js_text/49bcb5c0fd457f7a07d5fba4e343a5bf"
+                type="text/javascript"
+              ></script>
+              <style>
+                .sitestatesJs {
+                  display: none;
+                }
+              </style>
+            </section>
+          </div>
+          <div class="todo">
+            <!-- <div class="center">
 						<h1></h1>
 					</br>
 					</div> -->
-					<div class="head Websitefeatures">
-						<h3 class="Websitefeatures"> 網站資訊</h3>
-						<!-- <i class='bx bx-plus' ></i>
+            <div class="head Websitefeatures">
+              <h3 class="Websitefeatures">網站資訊</h3>
+              <!-- <i class='bx bx-plus' ></i>
 						<i class='bx bx-filter' ></i> -->
-					</div>
-					<ul class="todo-list Websitefeatures">
-						<li class="not-completed">
-							<p id="Total">累計人次</p>
-						</li>
+            </div>
+            <ul class="todo-list Websitefeatures">
+              <li class="not-completed">
+                <p id="Total">累計人次</p>
+              </li>
 
-						<li class="not-completed">
-							<p id="Today">今日訪客</p>
-						</li>
-						<li class="not-completed">
-							<p id="online">線上人數</p>
-						</li>
-					</ul>
-					<div class="head" style="margin-top: 1.4em;">
-						<h3>聯絡我們</h3>
-						<!-- <i class='bx bx-plus' ></i>
+              <li class="not-completed">
+                <p id="Today">今日訪客</p>
+              </li>
+              <li class="not-completed">
+                <p id="online">線上人數</p>
+              </li>
+            </ul>
+            <div class="head" style="margin-top: 1.4em">
+              <h3>聯絡我們</h3>
+              <!-- <i class='bx bx-plus' ></i>
 						<i class='bx bx-filter' ></i> -->
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<address>
-								<p>
-									<a href="mailto:toby91511@gmail.com">
-										toby91511@gmail.com</a>
-								</p>
-							</address>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
-	<script src="js/dashboardC3.js"></script>
-	<!-- <script src="js/driver.js"></script> -->
-	<script src="js/dashboard.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-		<script>
-		Swal.fire({
-			title: "TCRSv1 已停止維護</br>請前往 TCRS-Render ",
-			showDenyButton: false,
-			showCancelButton: true,
-			confirmButtonText: '<a style="color:#FFF; text-decoration: none" href="https://tcrs-api.onrender.com/">前往新網站 </a>'
-		})
-	</script>
-</body>
-
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <address>
+                  <p>
+                    <a href="mailto:toby91511@gmail.com">
+                      toby91511@gmail.com</a
+                    >
+                  </p>
+                </address>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+    <script src="js/dashboardC3.js"></script>
+    <!-- <script src="js/driver.js"></script> -->
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      Swal.fire({
+        title: "<strong>這個版本已經停止更新!</strong>",
+        icon: "info",
+        html: `請前往 <a href="https://tcrs-api.onrender.com/"> TCRS Render</a>`,
+        showCloseButton: false,
+        showCancelButton: false,
+        focusConfirm: true,
+        confirmButtonText: `Close`,
+      });
+    </script>
+  </body>
 </html>
